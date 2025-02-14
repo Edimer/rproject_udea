@@ -16,6 +16,11 @@ intro_image_hide_on_mobile: true
 
 # Temas Diseño Experimental
 
+| Tema | Diapositivas | Ejemplos |
+| :--- | :----------: | :------: |
+| *Presentación del curso* | [🖥️](/temas/DisExperimental-202501/01-presentacion-curso.html) | |
+| *Introducción* | [🖥️](/temas/DisExperimental-202501/02-introduccion.html) | |
+
   
     
     
