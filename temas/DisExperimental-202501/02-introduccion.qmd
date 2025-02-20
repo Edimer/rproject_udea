@@ -38,9 +38,27 @@ format:
 ## Proceso de análisis de datos
 <html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
 
+![](https://miro.medium.com/v2/resize:fit:1034/1*BsYkSrXgHeaT5f7jvo7JMw.png){fig-align="center"}
+
+
+## Manejo de datos
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
+
+![](https://bookdown.org/paradinas_iosu/CursoR/images/procesar_datos.png){fig-align="center"}
+
+## Exploración de datos
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
+
 ![](images/data-science-workflow2.png){fig-align="center"}
 
-## Planificación e implementación de un estudio {.scrollable  .smaller}
+## Modelación
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
+
+![](https://rviews.rstudio.com/post/2017-06-09-What-is-the-tidyverse_files/tidyverse2.png){fig-align="center"}
+
+
+
+## Planificación {.scrollable  .smaller}
 <html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
 
 ::: {.incremental}
@@ -86,116 +104,18 @@ format:
 
 :::
 
-## Parámetros de interés en la regresión {.scrollable .smaller}
-<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
-
-$$\hat{y} = \hat{\beta_0} + \hat{\beta_1}X_{i1} + \hat{\beta_2}X_{i2} + ... + \hat{\beta_{p-1}}X_{i_{(p-1)}} +  \hat{\epsilon}$$
-
-
-$$\beta = (X^TX)^{-1}X^Ty$$
-
-
-| Parámetro Poblacional | Notación | Estadístico | Estimación | Hipótesis |
-| :--- | :----------------: | :----: | :-----: | :-------: |
-| Pendiente de regresión poblacional | $\beta_i$ | $\hat{\beta_i}$  | Pendiente de regresión muestral | $$H_0: \beta_i = 0 \\ H_1: \beta_i \neq 0$$ |
-
-
-
-::: columns
-
-::: {.column width="50%"}
-
-<br>
-
-#### Supuestos matemáticos de modelos lineales
-
-- Normalidad
-- Homocedasticidad
-- Independencia
-- Linealidad
-
-:::
-
-::: {.column width="50%"}
-
-<br>
-
-![](https://bookdown.org/roback/bookdown-BeyondMLR/bookdown-BeyondMLR_files/figure-html/OLSassumptions-1.png){fig-align="center"}
-
-:::
-
-:::
-
-## Otros parámetros de interés {.scrollable .smaller}
-<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
-
-| Parámetro Poblacional | Notación | Estadístico | Estimación | Hipótesis |
-| :--- | :----------------: | :----: | :-----: | :-------: |
-| Proporción poblacional | $p$ | $\hat{p}$  | Proporción muestral | $$H_0: p = \theta \\ H_1: p \neq \theta$$ |
-| Media poblacional | $\mu$ | $\bar{x}$  | Media muestral | $$H_0: \mu = \theta \\ H_1: \mu \neq \theta$$ |
-| Diferencia de proporciones poblacionales | $p_1 - p_2$ | $\hat{p_1} - \hat{p_2}$  | Diferencia de proporciones muestrales | $$H_0: p_1 - p_2 = 0 \\ H_1: p_1 - p_2 \neq 0$$ |
-| Diferencia de medias poblacionales | $\mu_1 - \mu_2$ | $\bar{x_1} - \bar{x_2}$  | Diferencia de medias muestrales | $$H_0: \mu_1 - \mu_2 = 0 \\ H_1: \mu_1 - \mu_2 \neq 0$$ |
 
 ## Tipos de modelos
 <html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
 
-![](images/img0.png){fig-align="center"}
+![](https://www.researchgate.net/publication/277283731/figure/fig4/AS:669494062096395@1536631231609/terative-process-of-descriptive-and-predictive-modelling-Descriptive-modelling-reveals.png){fig-align="center"}
 
-## Métodos estadísticos
+## Tipos de métodos estadísticos
 <html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
 
 ![](images/img3.png){fig-align="center"}
 
-## El arte de la experimentación {.smaller}
-<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
 
-::: {.panel-tabset}
-
-### Principios
-
-::: columns
-
-::: {.column width="50%"}
-
-#### ¿Por qué hacer un experimento?
-
-- Determinar las principales causas de variación en una respuesta medida
-- Encontrar las condiciones que dan lugar a una respuesta máxima o mínima
-- Obtener un modelo matemático para predecir respuestas futuras
-
-#### Técnicas fundamentales
-
-- Replicación `->`  Incrementa precisión
-- Bloqueo `->` Incrementa precisión
-- Aleatorización `->` Reduce el sesgo
-
-:::
-
-::: {.column width="50%"}
-
-<br>
-
-<center>
-<img src = "https://media.springernature.com/w306/springer-static/cover-hires/book/978-3-319-52250-0" width = 280/>
-</center>
-
-
-:::
-
-:::
-
-### Conceptos
-
-- Réplica
-- Repetición
-- Unidad experimental
-- Factor (fuente de variación)
-- Tratamiento
-- Bloque
-- Efectos aditivos
-- Efectos multiplicativos (interacción)
-
-:::
 
 ## ¡Gracias!
 <html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
