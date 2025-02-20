@@ -115,7 +115,56 @@ format:
 
 ![](images/img3.png){fig-align="center"}
 
+## Diseño experimental {.smaller}
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
 
+::: {.panel-tabset}
+
+### Principios
+
+::: columns
+
+::: {.column width="50%"}
+
+#### ¿Por qué hacer un experimento?
+
+- Determinar las principales causas de variación en una respuesta medida
+- Encontrar las condiciones que dan lugar a una respuesta máxima o mínima
+- Obtener un modelo matemático para predecir respuestas futuras
+
+#### Técnicas fundamentales
+
+- Replicación `->`  Incrementa precisión
+- Bloqueo `->` Incrementa precisión
+- Aleatorización `->` Reduce el sesgo
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+<center>
+<img src = "https://media.springernature.com/w306/springer-static/cover-hires/book/978-3-319-52250-0" width = 280/>
+</center>
+
+
+:::
+
+:::
+
+### Conceptos
+
+- Réplica
+- Repetición
+- Unidad experimental
+- Factor (fuente de variación)
+- Tratamiento
+- Bloque
+- Efectos aditivos
+- Efectos multiplicativos (interacción)
+
+:::
 
 ## ¡Gracias!
 <html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
