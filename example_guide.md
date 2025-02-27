@@ -20,25 +20,7 @@ intro_image_hide_on_mobile: true
 
 # Bases de datos
 
-- [Ejemplo de importación de datos](/temas/data/ejemeplos-importacion.zip)
-- [Datos desordenados](/temas/data/datos-desordenados.zip)
-- [Datos lechería EEUU](/temas/data/lecheria_eeuu.csv)
-- [Mapa Colombia - Departamentos](/temas/data/MGN2021_DPTO_POLITICO.rar)
-- [Mapa Colombia - Municipios](/temas/data/MGN2021_MPIO_POLITICO.rar)
-- [Evaluaciones agropecuarias 2019-2023](https://upra.gov.co/es-co/Paginas/eva_2023.aspx)
-- [Créditos agropecuarios 2021-2024](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Colocaciones-de-Cr-dito-Sector-Agropecuario-2021-2/w3uf-w9ey/about_data)
-- [Nivel de embalses en Colombia](/temas/data/PorcVoluUtilDiar.csv)
-- [Análisis de suelos](/temas/data/Resultados_de_An_lisis_de_Laboratorio_Suelos_en_Colombia.csv)
-- [Encuestas presidenciales 2022](/temas/data/EncuestasColombia2022-Update.csv)
-- [Datos videojuego FIFA](/temas/data/df_fifa_total.csv)
-- [Datos de producción de miel en EEUU](/temas/data/abejas.csv)
-- [Encuestas elecciones 2024 en Estados Unidos - Taller 3 DE](/temas/data/encuestas_elecciones_eeuu.zip)
-- [Datos de encuesta de clase](/temas/data/encuesta_depurada.xlsx)
-- [Datos de cebada](/temas/data/datos_cebada.xlsx)
-- [Datos de trigo](/temas/data/datos_trigo.xlsx)
-- [Datos de parciales (muestras pareadas)](/temas/data/datos_parciales.xlsx)
-- [Raster elevación (.tif)](/temas/data/wc2.1_2.5m_elev.zip)
-- [Experimento en ratones](/temas/data/experimento_ratones.xlsx)
+- [Datos zarigüeyas](/temas/data/zarigueyas.csv)
 
 # Funciones auxiliares
 

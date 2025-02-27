@@ -2,7 +2,7 @@
 title: "Regresión Lineal"
 subtitle: "Diseño Experimental"
 author: "Edimer David Jaramillo"
-date: "2024-09-19"
+date: "2025-02-27"
 format:
   revealjs:
     auto-animate: true
@@ -18,6 +18,35 @@ format:
       width: wide
 css: estilo.css
 ---
+
+## ¿Para qué me sirve la regresión? 💡
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
+
+![](https://www.animalbank.net/wp-content/uploads/2019/03/Zarigueya-8.jpg){fig-align="center"}
+
+::: footer
+Fuente de datos: [Possum Regression - Kaggle](https://www.kaggle.com/datasets/abrambeyer/openintro-possum)
+::: 
+
+## ¿Para qué me sirve la regresión? 💡
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(ggpubr)
+library(qqplotr)
+library(DT)
+
+datos <- read_csv("../data/zarigueyas.csv")
+
+datos |> 
+  head(3) |> 
+  datatable(options = list(scrollX = TRUE))
+```
+
+> ¿Puedo estimar (predecir) la edad de las zarigüeyas? 🤔
 
 ## <col_blanco> Regresión Lineal </col_blanco>  {background-image="https://media.giphy.com/media/1kTNRve3ou82rqpSC2/giphy.gif" background-size="100%"}
 
@@ -129,22 +158,11 @@ Fuente de imagen: [Understanding Linear Regression: The Basics](https://www.link
 ### Con R
 
 ```{r}
-#| echo: false
-
-library(tidyverse)
-library(ggpubr)
-library(qqplotr)
-
-datos <- read_csv("data/lecheria_eeuu.csv")
-```
-
-
-```{r}
 #| code-line-numbers: "2"
 #| echo: true
 
 # Regresión lineal simple
-modelo <- lm(avg_price_milk ~ dairy_ration, data = datos)
+modelo <- lm(edad ~ longitud_cabeza, data = datos)
 modelo |> summary()
 ```
 
@@ -157,8 +175,8 @@ $$\beta = (X^TX)^{-1}X^Ty$$
 #| echo: true
 
 # Variables predictora y respuesta
-var_predictora <- datos$dairy_ration
-var_y <- datos$avg_price_milk
+var_predictora <- datos$longitud_cabeza
+var_y <- datos$edad
 
 # Matriz X
 matriz_x <- cbind(1, var_predictora)
@@ -228,12 +246,12 @@ modelo |> plot()
 
 ### Manual
 
-$$\hat{y} = 0.086176 + (1.038172 \times X)$$
+$$\hat{y} = -12.8089426 + (0.1793443 \times X)$$
 
 ```{r}
 #| echo: true
-nueva_x <- 0.082
-0.086176 + (1.038172 * nueva_x)
+nueva_x <- 83.56
+-12.8089426 + (0.1793443 * nueva_x)
 ```
 
 ### Con R
@@ -241,9 +259,7 @@ nueva_x <- 0.082
 ```{r}
 #| echo: true
 datos_ejemplo <-
-  datos |> 
-  sample_n(size = 10) |> 
-  select(dairy_ration)
+  data.frame(longitud_cabeza = c(83.56))
 
 predict(object = modelo, newdata = datos_ejemplo)
 ```

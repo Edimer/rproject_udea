@@ -20,6 +20,7 @@ intro_image_hide_on_mobile: true
 | :--- | :----------: | :------: |
 | *Presentación del curso* | [🖥️](/temas/DisExperimental-202501/01-presentacion-curso.html) | |
 | *Introducción* | [🖥️](/temas/DisExperimental-202501/02-introduccion.html) | |
+| *Regresión lineal* | [🖥️](/temas/DisExperimental-202501/03-regresion-lineal-simple.html) | |
 
   
     
