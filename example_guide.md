@@ -21,6 +21,7 @@ intro_image_hide_on_mobile: true
 # Bases de datos
 
 - [Datos zarigüeyas](/temas/data/zarigueyas.csv)
+- [Ejemplos importación de datos](/temas/data/ejemeplos-importacion.zip)
 
 # Funciones auxiliares
 
