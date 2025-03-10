@@ -12,7 +12,7 @@ intro_image_hide_on_mobile: true
 | :--- | :----------: | :------: |
 | *Presentación del curso* | [🖥️](/temas/Statistics-202501/01-curso/01-curso.html) | |
 | *Introducción a R y RStudio* | [🖥️](/temas/Statistics-202501/02-R-RStudio/01-r-rstudio.html) | |
-
+| *Datos ordenados* | [🖥️](/temas/Statistics-202501/03-datos-ordenados/03-datos-ordenados.html) | |
 
 # Temas Diseño Experimental
 

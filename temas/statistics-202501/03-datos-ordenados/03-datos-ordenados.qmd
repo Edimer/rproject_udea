@@ -1,0 +1,162 @@
+---
+title: "Datos Ordenados"
+subtitle: "Estadística"
+author: "Edimer David Jaramillo"
+date: "2025-03-10"
+format:
+  revealjs:
+    scrollable: true
+    code-copy: true
+    code-link: true
+    auto-animate: true
+    progress: true
+    history: true
+    preview-links: true
+    slide-number: c
+    show-slide-number: all
+    chalkboard: true
+    footer: <https://rproject-udea.netlify.app/>
+    logo: https://storage.googleapis.com/efor-static/UDEA/Cloudkey/Logohorizontal.png
+    menu:
+      side: left
+      width: wide
+---
+
+## 
+
+::: rows
+::: {.row height="30%"}
+![](https://bookdown.org/paradinas_iosu/CursoR/images/procesar_datos.png){fig-align="center" width=60%}
+
+:::
+::: {.row height="70%"}
+![](images/02-tidy-animado.png){fig-align="center" width=35%}
+:::
+:::
+
+
+
+::: footer
+Fuente de imagen: [*Tidy data for efficiency, reproducibility, and collaboration*](https://openscapes.org/blog/2020-10-12-tidy-data/)
+:::
+
+## *Tidy Data*
+
+::: columns
+::: {.column width="70%"}
+![](images/01-paper-tidy.png){width="75%"}
+:::
+
+::: {.column width="30%"}
+
+<br>
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Hadley-wickham2016-02-04.jpg/220px-Hadley-wickham2016-02-04.jpg)
+
+:::
+
+:::
+
+::: footer
+Artículo: [*Tidy Data*](https://vita.had.co.nz/papers/tidy-data.pdf)
+::: 
+
+
+## ⚠️🤔
+
+![](https://openscapes.org/img/blog/tidydata/tidydata_2.jpg){fig-align="center" width="90%"}
+
+::: footer
+Fuente de imagen: [*Tidy data for efficiency, reproducibility, and collaboration*](https://openscapes.org/blog/2020-10-12-tidy-data/)
+:::
+
+## Principios del *Tidy Data*
+
+::: incremental
+
+- Cada variable es una columna 
+- Cada fila es una observación
+- Cada celda es un valor
+
+:::
+
+![](images/03-datos-ordenados.png){fig-align="center" width="90%"}
+
+::: footer
+Fuente de imagen: [*R for Data Science (2e) - Chapter 5*](https://r4ds.hadley.nz/data-tidy.html)
+::: 
+
+## Ejemplo 1: variables en los nombres de las columnas (1/2) {.smaller}
+
+![](https://r4ds.hadley.nz/diagrams/tidy-data/variables.png){fig-align="center" width="50%"}
+
+::: incremental
+
+- [Costos Fedearroz](https://fedearroz.com.co/es/fondo-nacional-del-arroz/investigaciones-economicas/estadisticas-arroceras/costos/)
+- [Datos del Banco Mundial](https://datos.bancomundial.org/indicador)
+
+:::
+
+::: footer
+Fuente de imagen: [*R for Data Science (2e) - Chapter 5*](https://r4ds.hadley.nz/data-tidy.html)
+::: 
+
+## Ejemplo 2: variables en los nombres de las columnas (2/2) {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](https://r4ds.hadley.nz/diagrams/tidy-data/multiple-names.png){fig-align="center" width="90%"}
+:::
+::: {.column width="50%"}
+![](https://r4ds.hadley.nz/diagrams/tidy-data/names-and-values.png){fig-align="center" width="90%"}
+:::
+:::
+
+::: incremental
+
+- [Inventario de Ganado Bovino - Boyacá](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Inventario-de-Ganado-Bovino-DEPARTAMENTO-DE-BOYAC-/4wtf-sdh2/about_data)
+- [Inventario Poblacional Del Ganado Bovino Valle del Cauca](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Inventario-Poblacional-Del-Ganado-Bovino-Valle-del/65mn-ybz5/about_data)
+- [Inventario anual de Bovinos en Antioquia desde 2000](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Inventario-anual-de-Bovinos-en-Antioquia-desde-200/fy9z-8zxt/about_data)
+
+:::
+
+::: footer
+Fuente de imagen: [*R for Data Science (2e) - Chapter 5*](https://r4ds.hadley.nz/data-tidy.html)
+:::
+
+## Ejemplo 3: múltiples tablas para una misma unidad experimental {.smaller}
+
+![](https://blog.conholdate.com/total/combine-multiple-excel-files-into-one-using-java/images/combine-multiple-excel-files-into-one-using-java.jpg#center){fig-align="center" width="60%"}
+
+::: incremental
+
+- Raíces Bulbos y Tubérculos en el departamento del Valle del Cauca:
+  -  [Superficie Sembrada](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Superficie-Sembrada-con-Ra-ces-Bulbos-y-Tub-rculos/h7vs-gf6t/about_data)
+  - [Superficie Cosechada](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Superficie-Cosechada-con-Ra-ces-Bulbos-y-Tub-rculo/2uev-8vbt/about_data)
+  - [Producción en Toneladas](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Producci-n-en-Toneladas-por-Hect-reas-de-Ra-ces-Bu/hg7h-itmt/about_data)
+  - [Rendimiento en toneladas por hectárea](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Rendimiento-en-toneladas-por-hect-reas-en-Cultivos/239z-ikj9/about_data)
+
+:::
+
+::: footer
+Fuente de imagen: [*Merge Multiple Excel Files into One using REST API in Node.js*](https://blog.groupdocs.cloud/merger/merge-multiple-excel-files-into-one-using-rest-api-in-node-js/)
+:::
+
+## En conclusión...
+
+![](https://openscapes.org/img/blog/tidydata/tidydata_7.jpg){fig-align="center" width="85%"}
+
+
+## Biblioteca [`tidyr`](https://tidyr.tidyverse.org/)
+
+![](https://tidyr.tidyverse.org/logo.png){fig-align="center" width="50%"}
+
+## 
+ 
+<center>
+🤝🙂🤝
+</center>
+
+<br>
+
+![](images/gracias.gif){fig-align="center"}
