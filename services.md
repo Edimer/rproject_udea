@@ -11,8 +11,8 @@ intro_image_hide_on_mobile: true
 | Tema | Diapositivas | Ejemplos |
 | :--- | :----------: | :------: |
 | *Presentación del curso* | [🖥️](/temas/Statistics-202501/01-curso/01-curso.html) | |
-| *Introducción a R y RStudio* | [🖥️](/temas/Statistics-202501/02-R-RStudio/01-r-rstudio.html) | |
-| *Datos ordenados* | [🖥️](/temas/Statistics-202501/03-datos-ordenados/03-datos-ordenados.html) | |
+| *Introducción a R y RStudio* | [🖥️](/temas/Statistics-202501/02-R-RStudio/01-r-rstudio.html) | [📓](https://edimer.quarto.pub/importacion-datos/) |
+| *Datos ordenados* | [🖥️](/temas/Statistics-202501/03-datos-ordenados/03-datos-ordenados.html) | [📓](https://edimer.quarto.pub/datos-ordenados-cb9b/) |
 
 # Temas Diseño Experimental
 
