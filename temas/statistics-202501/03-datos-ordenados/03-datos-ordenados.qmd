@@ -86,7 +86,7 @@ Fuente de imagen: [*Tidy data for efficiency, reproducibility, and collaboration
 Fuente de imagen: [*R for Data Science (2e) - Chapter 5*](https://r4ds.hadley.nz/data-tidy.html)
 ::: 
 
-## Ejemplo 1: variables en los nombres de las columnas (1/2) {.smaller}
+## Ejemplo 1: valores en los nombres de las columnas (1/2) {.smaller}
 
 ![](https://r4ds.hadley.nz/diagrams/tidy-data/variables.png){fig-align="center" width="50%"}
 
