@@ -24,6 +24,7 @@ intro_image_hide_on_mobile: true
 - [Ejemplos importación de datos](/temas/data/ejemeplos-importacion.zip)
 - [Ejemplo datos desordenados](/temas/data/datos-desordenados-valle-del-cauca.zip)
 - [Evaluaciones agropecuarias - Colombia](https://upra.gov.co/es-co/Paginas/eva_2023.aspx)
+- [Créditos agropecuarios 2021-2024](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Colocaciones-de-Cr-dito-Sector-Agropecuario-2021-2/w3uf-w9ey/about_data)
 
 # Funciones auxiliares
 
