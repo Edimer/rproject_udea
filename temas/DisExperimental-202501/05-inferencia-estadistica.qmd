@@ -2,7 +2,7 @@
 title: "Inferencia Estadística"
 subtitle: "Diseño Experimental"
 author: "Edimer David Jaramillo"
-date: "2024-10-17"
+date: "2025-05-02"
 format:
   revealjs:
     smaller: true
