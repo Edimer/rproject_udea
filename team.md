@@ -15,5 +15,6 @@ intro_image_hide_on_mobile: true
 # Actividades Diseño Experimental
 
 - [Actividad 01](https://edimer.quarto.pub/actividad-01-de/) [📓](https://edimer.quarto.pub/ejemplo-kaggle/)
+- [Actividad 02-03](https://edimer.quarto.pub/actividad02-de-202501/)
 
 
