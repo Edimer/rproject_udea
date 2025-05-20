@@ -11,6 +11,7 @@ intro_image_hide_on_mobile: true
 
 - [Actividad 01](https://edimer.quarto.pub/actividad-01-estadisttica/)
 - [Actividad 02](https://edimer.quarto.pub/actividad02-estadistica/)
+- [Actividad 03](https://edimer.quarto.pub/actividad03-estadistica/)
 
 # Actividades Diseño Experimental
 
