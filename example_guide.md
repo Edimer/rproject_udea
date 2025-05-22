@@ -26,6 +26,10 @@ intro_image_hide_on_mobile: true
 - [Evaluaciones agropecuarias - Colombia](https://upra.gov.co/es-co/Paginas/eva_2023.aspx)
 - [Créditos agropecuarios 2021-2024](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Colocaciones-de-Cr-dito-Sector-Agropecuario-2021-2/w3uf-w9ey/about_data)
 - [Nivel de embalses en Colombia](/temas/data/PorcVoluUtilDiar.csv)
+- [Datos trigo](/temas/data/datos_trigo.xlsx)
+- [Datos encuesta de clase](/temas/data/datos-encuestas-historia.xlsx)
+- [Datos parciales (muestras pareadas)](/temas/data/datos_parciales.xlsx)
+- [Datos cebada](/temas/data/datos_cebada.xlsx)
 
 # Funciones auxiliares
 
