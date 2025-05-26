@@ -2,7 +2,7 @@
 title: "Estadística Descriptiva y Exploratoria"
 subtitle: "Gráficos engañosos"
 author: "Edimer David Jaramillo"
-date: "2024-11-18"
+date: "2025-05-26"
 format:
   revealjs:
     scrollable: true
