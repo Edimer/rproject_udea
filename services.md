@@ -15,7 +15,7 @@ intro_image_hide_on_mobile: true
 | *Datos ordenados* | [🖥️](/temas/Statistics-202501/03-datos-ordenados/03-datos-ordenados.html) | [📓](https://edimer.quarto.pub/datos-ordenados-cb9b/) |
 | *Manejo de datos* | [🖥️](/temas/Statistics-202501/04-manejo-de-datos/04-manejo-de-datos.html) |  |
 | *Métricas estadísticas* | [🖥️](/temas/Statistics-202501/05-metricas-estadisticas/05-metricas-estadisticas.html) | [📓](https://edimer.quarto.pub/exploracion-datos-1/)  |
-| *Visualización de datos* | [🖥️](/temas/Statistics-202501/06-visualizacion/06-visualizacion.html) | [📓](https://edimer.quarto.pub/visualizacion-de-datos/)  |
+| *Visualización de datos* | [🖥️](/temas/Statistics-202501/06-visualizacion/06-visualizacion.html) | [📓](https://edimer.quarto.pub/visualizacion-de-datos/) [📗](/temas/Guides/examples_stat2501/08-visualizaciones-complementarias.html) [📙](/temas/Guides/examples_stat2501/09-mapas.html) |
 | *Gráficos engañosos* | [🖥️](/temas/Statistics-202501/06-visualizacion/07-graficos-misleading.html) |  |
 
 # Temas Diseño Experimental
