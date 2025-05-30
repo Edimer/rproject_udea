@@ -2,7 +2,7 @@
 title: "Análisis de Experimentos"
 subtitle: "Diseño Experimental"
 author: "Edimer David Jaramillo"
-date: "2024-11-22"
+date: "2025-05-30"
 format:
   revealjs:
     smaller: true

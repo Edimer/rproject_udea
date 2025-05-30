@@ -27,6 +27,7 @@ intro_image_hide_on_mobile: true
 | *Regresión lineal* | [🖥️](/temas/DisExperimental-202501/03-regresion-lineal-simple.html) | [📓](https://edimer.quarto.pub/reg-lineal-simple/) |
 | *Regresión lineal Múltiple* | [🖥️](/temas/DisExperimental-202501/04-regresion-lineal-multiple.html) | [📓](https://edimer.quarto.pub/regresion-multiple/) |
 | *Inferencia estadística* | [🖥️](/temas/DisExperimental-202501/05-inferencia-estadistica.html) | [📓](https://edimer.quarto.pub/tlc-muestreo/) [📗](https://edimer.quarto.pub/inferencia-una-poblacion/) [📙](https://edimer.quarto.pub/inferencia-2poblaciones/) |
+| *Análisis de experimentos* | [🖥️](/temas/DisExperimental-202501/06-dis-experimentos.html) |
 
   
     
