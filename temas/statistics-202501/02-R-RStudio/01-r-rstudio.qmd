@@ -2,7 +2,7 @@
 title: "Herramientas informáticas"
 subtitle: "Estadística"
 author: "Edimer David Jaramillo"
-date: "2025-02-11"
+date: "2025-08-05"
 format:
   revealjs:
     auto-animate: true

@@ -2,7 +2,7 @@
 title: "Presentación del curso"
 subtitle: "Estadística"
 author: "Edimer David Jaramillo"
-date: "2025-02-10"
+date: "2025-08-05"
 format:
   revealjs:
     scrollable: true
@@ -58,11 +58,11 @@ Fuente de imagen: [*Encyclopedia Britannica - Carl Sagan American astronomer*](h
 
 
 - **Talleres:** 
-  - Desarrollo de talleres en clase (50 %)
+  - Desarrollo de talleres en clase (30 %)
 - **Actividad 1:** 
-  - Desarrollo de estudio de casos y resolución de ejercicios y problemas (25 %)
+  - Desarrollo de estudio de casos y resolución de ejercicios y problemas (35 %)
 - **Actividad 2:** 
-  - Desarrollo de estudio de casos y resolución de ejercicios y problemas (25 %) 
+  - Desarrollo de estudio de casos y resolución de ejercicios y problemas (35 %) 
 
 
 # Recursos de Información {.smaller background-gradient="radial-gradient(#283b95, #17b2c3)"}
