@@ -2,7 +2,7 @@
 title: "Presentación del curso"
 subtitle: "Diseño Experimental"
 author: "Edimer David Jaramillo"
-date: "2025-02-14"
+date: "2025-08-14"
 format:
   revealjs:
     auto-animate: true
@@ -40,15 +40,15 @@ format:
 
 - **Talleres en clase:** 
   - Resolución de ejercicios y problemas
-  - 50 %
+  - 30 %
 - **Actividad 2:** 
   - Trabajo escrito
   - Resolución de ejercicios y problemas
-  - 25 %
+  - 35 %
 - **Actividad 3:** 
   - Trabajo escrito
   - Resolución de ejercicios y problemas
-  - 25 %
+  - 35 %
 
 # Herramientas
 
