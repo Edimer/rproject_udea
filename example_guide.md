@@ -20,7 +20,7 @@ intro_image_hide_on_mobile: true
 
 # Bases de datos
 
-- [Ejemplos para importación de datos](/temas/data/ejemeplos-importacion.zip)
+- [Ejemplos para importación de datos](/temas/data/ejemplos-importacion.zip)
 
 # Funciones auxiliares
 
