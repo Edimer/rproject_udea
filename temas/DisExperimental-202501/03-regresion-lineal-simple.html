@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="Edimer David Jaramillo">
-  <meta name="dcterms.date" content="2025-02-27">
+  <meta name="dcterms.date" content="2025-08-28">
   <title>Regresión Lineal</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -191,26 +191,6 @@
       margin-right: 0; 
     }
   </style>
-  <link href="03-regresion-lineal-simple_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-
-  <script src="03-regresion-lineal-simple_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-
-  <link href="03-regresion-lineal-simple_files/libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-
-  <script src="03-regresion-lineal-simple_files/libs/datatables-binding-0.33/datatables.js"></script>
-
-  <script src="03-regresion-lineal-simple_files/libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-
-  <link href="03-regresion-lineal-simple_files/libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
-
-  <link href="03-regresion-lineal-simple_files/libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
-
-  <script src="03-regresion-lineal-simple_files/libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
-
-  <link href="03-regresion-lineal-simple_files/libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
-
-  <script src="03-regresion-lineal-simple_files/libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -228,7 +208,7 @@ Edimer David Jaramillo
 </div>
 </div>
 
-  <p class="date">2025-02-27</p>
+  <p class="date">2025-08-28</p>
 </section>
 <section id="para-qué-me-sirve-la-regresión" class="slide level2 smaller">
 <h2>¿Para qué me sirve la regresión? 💡</h2>
@@ -332,8 +312,8 @@ Edimer David Jaramillo
 <hr color="#EB811B" size="1px">
 
 
-<img data-src="03-regresion-lineal-simple_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"></section>
-<section id="para-qué-me-sirve-la-regresión-4" class="slide level2">
+<img data-src="03-regresion-lineal-simple_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="para-qué-me-sirve-la-regresión-4" class="slide level2 smaller">
 <h2>¿Para qué me sirve la regresión? 💡</h2>
 
 <div style="float:left">
@@ -342,11 +322,8 @@ Edimer David Jaramillo
 <hr color="#EB811B" size="1px">
 
 
-<img data-src="https://www.animalbank.net/wp-content/uploads/2019/03/Zarigueya-8.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p>Fuente de datos: <a href="https://www.kaggle.com/datasets/abrambeyer/openintro-possum">Possum Regression - Kaggle</a></p>
-</div>
-</section>
-<section id="para-qué-me-sirve-la-regresión-5" class="slide level2">
+<img data-src="03-regresion-lineal-simple_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="para-qué-me-sirve-la-regresión-5" class="slide level2 smaller">
 <h2>¿Para qué me sirve la regresión? 💡</h2>
 
 <div style="float:left">
@@ -354,16 +331,18 @@ Edimer David Jaramillo
 </div>
 <hr color="#EB811B" size="1px">
 
-<div class="cell">
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-ff18aa131d4a57a1256a" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-ff18aa131d4a57a1256a">{"x":{"filter":"none","vertical":false,"data":[["1","2","3"],[1,2,3],[1,1,1],["Vic","Vic","Vic"],["m","f","f"],[8,6,6],[94.09999999999999,92.5,94],[60.4,57.6,60],[89,91.5,95.5],[36,36.5,39],[74.5,72.5,75.40000000000001],[54.5,51.2,51.9],[15.2,16,15.5],[28,28.5,30],[36,33,34]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>caso<\/th>\n      <th>sitio<\/th>\n      <th>poblacion<\/th>\n      <th>sexo<\/th>\n      <th>edad<\/th>\n      <th>longitud_cabeza<\/th>\n      <th>anchura_craneo<\/th>\n      <th>longitud_total<\/th>\n      <th>cola<\/th>\n      <th>longitud_pata<\/th>\n      <th>longitud_oreja<\/th>\n      <th>ojo<\/th>\n      <th>pecho<\/th>\n      <th>vientre<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[1,2,5,6,7,8,9,10,11,12,13,14]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"caso","targets":1},{"name":"sitio","targets":2},{"name":"poblacion","targets":3},{"name":"sexo","targets":4},{"name":"edad","targets":5},{"name":"longitud_cabeza","targets":6},{"name":"anchura_craneo","targets":7},{"name":"longitud_total","targets":8},{"name":"cola","targets":9},{"name":"longitud_pata","targets":10},{"name":"longitud_oreja","targets":11},{"name":"ojo","targets":12},{"name":"pecho","targets":13},{"name":"vientre","targets":14}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+
+<img data-src="03-regresion-lineal-simple_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="para-qué-me-sirve-la-regresión-6" class="slide level2 smaller">
+<h2>¿Para qué me sirve la regresión? 💡</h2>
+
+<div style="float:left">
+
 </div>
-</div>
-<blockquote>
-<p>¿Puedo estimar (predecir) la edad de las zarigüeyas? 🤔</p>
-</blockquote>
-</section>
+<hr color="#EB811B" size="1px">
+
+
+<img data-src="03-regresion-lineal-simple_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="regresión-lineal" class="slide level2" data-background-image="https://media.giphy.com/media/1kTNRve3ou82rqpSC2/giphy.gif" data-background-size="100%">
 <h2><col_blanco> Regresión Lineal </col_blanco></h2>
 <div class="footer">
@@ -462,59 +441,63 @@ Edimer David Jaramillo
 <div id="tabset-1-1">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="co"># Regresión lineal simple</span></span>
-<span id="cb1-2"><a href=""></a>modelo <span class="ot">&lt;-</span> <span class="fu">lm</span>(edad <span class="sc">~</span> longitud_cabeza, <span class="at">data =</span> datos)</span>
+<span id="cb1-2"><a href=""></a>modelo <span class="ot">&lt;-</span> <span class="fu">lm</span>(p_interno <span class="sc">~</span> pinterno_dia_anterior, <span class="at">data =</span> datos_cafe)</span>
 <span id="cb1-3"><a href=""></a>modelo <span class="sc">|&gt;</span> <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = edad ~ longitud_cabeza, data = datos)
+lm(formula = p_interno ~ pinterno_dia_anterior, data = datos_cafe)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--3.6815 -1.3815 -0.2424  1.1479  5.0761 
+-140459  -48354   -1949   53729  126579 
 
 Coefficients:
-                 Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)     -12.80894    4.79274  -2.673 0.008804 ** 
-longitud_cabeza   0.17934    0.05165   3.472 0.000766 ***
+                       Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)           5.047e+04  6.444e+04   0.783    0.436    
+pinterno_dia_anterior 9.823e-01  2.337e-02  42.035   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 1.817 on 99 degrees of freedom
-Multiple R-squared:  0.1086,    Adjusted R-squared:  0.09957 
-F-statistic: 12.06 on 1 and 99 DF,  p-value: 0.0007661</code></pre>
+Residual standard error: 68510 on 87 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.9531,    Adjusted R-squared:  0.9525 
+F-statistic:  1767 on 1 and 87 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-1-2">
 <p><span class="math display">\[\beta = (X^TX)^{-1}X^Ty\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="co"># Variables predictora y respuesta</span></span>
-<span id="cb3-2"><a href=""></a>var_predictora <span class="ot">&lt;-</span> datos<span class="sc">$</span>longitud_cabeza</span>
-<span id="cb3-3"><a href=""></a>var_y <span class="ot">&lt;-</span> datos<span class="sc">$</span>edad</span>
-<span id="cb3-4"><a href=""></a></span>
-<span id="cb3-5"><a href=""></a><span class="co"># Matriz X</span></span>
-<span id="cb3-6"><a href=""></a>matriz_x <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, var_predictora)</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="co"># Eliminamos los valores NA</span></span>
+<span id="cb3-2"><a href=""></a>datos_cafe2 <span class="ot">&lt;-</span> datos_cafe <span class="sc">|&gt;</span> <span class="fu">na.omit</span>()</span>
+<span id="cb3-3"><a href=""></a></span>
+<span id="cb3-4"><a href=""></a><span class="co"># Variables predictora y respuesta</span></span>
+<span id="cb3-5"><a href=""></a>var_predictora <span class="ot">&lt;-</span> datos_cafe2<span class="sc">$</span>pinterno_dia_anterior</span>
+<span id="cb3-6"><a href=""></a>var_y <span class="ot">&lt;-</span> datos_cafe2<span class="sc">$</span>p_interno</span>
 <span id="cb3-7"><a href=""></a></span>
-<span id="cb3-8"><a href=""></a><span class="co"># Transpuesta de X</span></span>
-<span id="cb3-9"><a href=""></a>transpuesta_x <span class="ot">&lt;-</span> <span class="fu">t</span>(matriz_x)</span>
+<span id="cb3-8"><a href=""></a><span class="co"># Matriz X</span></span>
+<span id="cb3-9"><a href=""></a>matriz_x <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, var_predictora)</span>
 <span id="cb3-10"><a href=""></a></span>
-<span id="cb3-11"><a href=""></a><span class="co"># X transpuesta * X</span></span>
-<span id="cb3-12"><a href=""></a>tranx_x <span class="ot">&lt;-</span> transpuesta_x <span class="sc">%*%</span> matriz_x</span>
+<span id="cb3-11"><a href=""></a><span class="co"># Transpuesta de X</span></span>
+<span id="cb3-12"><a href=""></a>transpuesta_x <span class="ot">&lt;-</span> <span class="fu">t</span>(matriz_x)</span>
 <span id="cb3-13"><a href=""></a></span>
-<span id="cb3-14"><a href=""></a><span class="co"># Inversa de X transpuesta * X</span></span>
-<span id="cb3-15"><a href=""></a>inversa <span class="ot">&lt;-</span> <span class="fu">solve</span>(tranx_x)</span>
+<span id="cb3-14"><a href=""></a><span class="co"># X transpuesta * X</span></span>
+<span id="cb3-15"><a href=""></a>tranx_x <span class="ot">&lt;-</span> transpuesta_x <span class="sc">%*%</span> matriz_x</span>
 <span id="cb3-16"><a href=""></a></span>
-<span id="cb3-17"><a href=""></a><span class="co"># Inveresa de X transpuesta * X por transpuesta  de X</span></span>
-<span id="cb3-18"><a href=""></a>inversa_tranx <span class="ot">&lt;-</span> inversa <span class="sc">%*%</span> <span class="fu">t</span>(matriz_x)</span>
+<span id="cb3-17"><a href=""></a><span class="co"># Inversa de X transpuesta * X</span></span>
+<span id="cb3-18"><a href=""></a>inversa <span class="ot">&lt;-</span> <span class="fu">solve</span>(tranx_x)</span>
 <span id="cb3-19"><a href=""></a></span>
-<span id="cb3-20"><a href=""></a><span class="co"># Betas</span></span>
-<span id="cb3-21"><a href=""></a>betas <span class="ot">&lt;-</span> inversa_tranx <span class="sc">%*%</span> var_y</span>
-<span id="cb3-22"><a href=""></a>betas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-20"><a href=""></a><span class="co"># Inveresa de X transpuesta * X por transpuesta  de X</span></span>
+<span id="cb3-21"><a href=""></a>inversa_tranx <span class="ot">&lt;-</span> inversa <span class="sc">%*%</span> <span class="fu">t</span>(matriz_x)</span>
+<span id="cb3-22"><a href=""></a></span>
+<span id="cb3-23"><a href=""></a><span class="co"># Betas</span></span>
+<span id="cb3-24"><a href=""></a>betas <span class="ot">&lt;-</span> inversa_tranx <span class="sc">%*%</span> var_y</span>
+<span id="cb3-25"><a href=""></a>betas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                      [,1]
-               -12.8089426
-var_predictora   0.1793443</code></pre>
+<pre><code>                       [,1]
+               5.046868e+04
+var_predictora 9.822738e-01</code></pre>
 </div>
 </div>
 </div>
@@ -571,7 +554,7 @@ var_predictora   0.1793443</code></pre>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="03-regresion-lineal-simple_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+<p><img data-src="03-regresion-lineal-simple_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -594,24 +577,24 @@ var_predictora   0.1793443</code></pre>
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Manual</a></li><li><a href="#tabset-2-2">Con R</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
-<p><span class="math display">\[\hat{y} = -12.8089426 + (0.1793443 \times X)\]</span></p>
+<p><span class="math display">\[\hat{y} = 50468.68 + (0.9822738 \times X)\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>nueva_x <span class="ot">&lt;-</span> <span class="fl">83.56</span></span>
-<span id="cb6-2"><a href=""></a><span class="sc">-</span><span class="fl">12.8089426</span> <span class="sc">+</span> (<span class="fl">0.1793443</span> <span class="sc">*</span> nueva_x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>precio_dia_anterior <span class="ot">&lt;-</span> <span class="dv">3140000</span></span>
+<span id="cb6-2"><a href=""></a><span class="fl">50468.68</span> <span class="sc">+</span> (<span class="fl">0.9822738</span> <span class="sc">*</span> precio_dia_anterior)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2.177067</code></pre>
+<pre><code>[1] 3134808</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-2-2">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>datos_ejemplo <span class="ot">&lt;-</span></span>
-<span id="cb8-2"><a href=""></a>  <span class="fu">data.frame</span>(<span class="at">longitud_cabeza =</span> <span class="fu">c</span>(<span class="fl">83.56</span>))</span>
+<span id="cb8-2"><a href=""></a>  <span class="fu">data.frame</span>(<span class="at">pinterno_dia_anterior =</span> <span class="dv">3140000</span>)</span>
 <span id="cb8-3"><a href=""></a></span>
 <span id="cb8-4"><a href=""></a><span class="fu">predict</span>(<span class="at">object =</span> modelo, <span class="at">newdata =</span> datos_ejemplo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      1 
-2.17707 </code></pre>
+3134808 </code></pre>
 </div>
 </div>
 </div>

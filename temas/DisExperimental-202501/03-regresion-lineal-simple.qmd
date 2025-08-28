@@ -2,7 +2,7 @@
 title: "Regresión Lineal"
 subtitle: "Diseño Experimental"
 author: "Edimer David Jaramillo"
-date: "2025-02-27"
+date: "2025-08-28"
 format:
   revealjs:
     auto-animate: true
@@ -131,7 +131,7 @@ datos_densidad <- data.frame(
 
 # Gráfico de dispersión con regresión lineal
 ggplot(datos_densidad, aes(x = densidad, y = rendimiento_planta)) +
-  geom_point(size = 2, color = "#4682B4", alpha = 0.7) +
+  geom_point(size = 2, color = "#2E8B57", alpha = 0.7) +
   geom_smooth(method = "lm", se = TRUE, color = "#FF6B35", linewidth = 1) +
   labs(
     title = "Regresión Lineal",
@@ -215,7 +215,7 @@ datos_plagas <- data.frame(
 
 # Gráfico de dispersión con regresión lineal inversa
 ggplot(datos_plagas, aes(x = dosis_insecticida, y = conteo_plagas)) +
-  geom_point(size = 2, color = "#8B0000", alpha = 0.7) +
+  geom_point(size = 2, color = "#2E8B57", alpha = 0.7) +
   geom_smooth(method = "lm", se = TRUE, color = "#FF6B35", linewidth = 1) +
   labs(
     title = "Regresión Lineal",
@@ -252,7 +252,7 @@ datos_plagas_nl <- data.frame(
 
 # Gráfico de dispersión con regresión no lineal inversa
 ggplot(datos_plagas_nl, aes(x = dosis_insecticida, y = conteo_plagas)) +
-  geom_point(size = 2, color = "#8B0000", alpha = 0.7) +
+  geom_point(size = 2, color = "#2E8B57", alpha = 0.7) +
   geom_smooth(method = "loess", se = TRUE, color = "#FF6B35", linewidth = 1) +
   labs(
     title = "Regresión No Lineal",
@@ -276,8 +276,6 @@ ggplot(datos_plagas_nl, aes(x = dosis_insecticida, y = conteo_plagas)) +
 
 ```{r}
 #| echo: false
-#| fig-width: 5
-#| fig-height: 5
 #| fig-align: center
 
 library(tidyverse)
@@ -294,7 +292,7 @@ datos_trm <- read_csv("../data/TRM_20250828.csv") |>
 
 # Gráfico de dispersión con regresión lineal inversa
 ggplot(datos_trm, aes(x = trm_dia_anterior, y = VALOR)) +
-  geom_point(size = 2, color = "#8B0000", alpha = 0.7) +
+  geom_point(size = 2, color = "#2E8B57", alpha = 0.7) +
   geom_smooth(method = "lm", se = TRUE, color = "#FF6B35", linewidth = 1) +
   labs(
     title = "TRM último trimestre en Colombia",
@@ -309,34 +307,87 @@ ggplot(datos_trm, aes(x = trm_dia_anterior, y = VALOR)) +
   )
 ```
 
-## ¿Para qué me sirve la regresión? 💡
-<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
-
-![](https://www.animalbank.net/wp-content/uploads/2019/03/Zarigueya-8.jpg){fig-align="center"}
-
-::: footer
-Fuente de datos: [Possum Regression - Kaggle](https://www.kaggle.com/datasets/abrambeyer/openintro-possum)
-::: 
-
-## ¿Para qué me sirve la regresión? 💡
+## ¿Para qué me sirve la regresión? 💡 {.smaller}
 <html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
 
 ```{r}
 #| echo: false
+#| fig-align: center
 
-library(tidyverse)
-library(ggpubr)
-library(qqplotr)
-library(DT)
+datos_cafe <- read_csv("../data/precios_cafe_fedecafeteros.csv") |> 
+  arrange(fecha) |> 
+  mutate(pinterno_dia_anterior = lag(p_interno, n = 1),
+         pexterno_dia_anterior = lag(p_externo, n = 1))
 
-datos <- read_csv("../data/zarigueyas.csv")
-
-datos |> 
-  head(3) |> 
-  datatable(options = list(scrollX = TRUE))
+# Gráfico de dispersión con regresión lineal inversa
+ggplot(datos_cafe, aes(x = pinterno_dia_anterior, y = p_interno)) +
+  geom_point(size = 2, color = "#2E8B57", alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, color = "#FF6B35", linewidth = 1) +
+  labs(
+    title = "Precio interno de café - Último trimestre en Colombia",
+    x = "Precio interno (t-1)",
+    y = "Precio interno (t)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
 ```
 
-> ¿Puedo estimar (predecir) la edad de las zarigüeyas? 🤔
+## ¿Para qué me sirve la regresión? 💡 {.smaller}
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
+
+```{r}
+#| echo: false
+#| fig-align: center
+
+
+# Gráfico de dispersión con regresión lineal inversa
+ggplot(datos_cafe, aes(x = pexterno_dia_anterior, y = p_externo)) +
+  geom_point(size = 2, color = "#2E8B57", alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, color = "#FF6B35", linewidth = 1) +
+  labs(
+    title = "Precio externo de café - Último trimestre NY",
+    x = "Precio externo (t-1)",
+    y = "Precio externo (t)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+```
+
+## ¿Para qué me sirve la regresión? 💡 {.smaller}
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
+
+```{r}
+#| echo: false
+#| fig-align: center
+
+datos_saber <- read_csv("../data/datos_saber11_saberpro.csv")
+
+# Gráfico de dispersión con regresión lineal inversa
+ggplot(datos_saber, aes(x = PUNT_MATEMATICAS_S11, y = MOD_RAZONA_CUANTITAT_PUNT_SPRO)) +
+  geom_point(size = 2, color = "#2E8B57", alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, color = "#FF6B35", linewidth = 1) +
+  labs(
+    title = "Saber 11 vs Saber Pro",
+    x = "Matemáticas (S11)",
+    y = "Razonamiento cuantitativo (SPro)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+```
+
+
 
 ## <col_blanco> Regresión Lineal </col_blanco>  {background-image="https://media.giphy.com/media/1kTNRve3ou82rqpSC2/giphy.gif" background-size="100%"}
 
@@ -452,7 +503,7 @@ Fuente de imagen: [Understanding Linear Regression: The Basics](https://www.link
 #| echo: true
 
 # Regresión lineal simple
-modelo <- lm(edad ~ longitud_cabeza, data = datos)
+modelo <- lm(p_interno ~ pinterno_dia_anterior, data = datos_cafe)
 modelo |> summary()
 ```
 
@@ -464,9 +515,12 @@ $$\beta = (X^TX)^{-1}X^Ty$$
 ```{r}
 #| echo: true
 
+# Eliminamos los valores NA
+datos_cafe2 <- datos_cafe |> na.omit()
+
 # Variables predictora y respuesta
-var_predictora <- datos$longitud_cabeza
-var_y <- datos$edad
+var_predictora <- datos_cafe2$pinterno_dia_anterior
+var_y <- datos_cafe2$p_interno
 
 # Matriz X
 matriz_x <- cbind(1, var_predictora)
@@ -536,12 +590,12 @@ modelo |> plot()
 
 ### Manual
 
-$$\hat{y} = -12.8089426 + (0.1793443 \times X)$$
+$$\hat{y} = 50468.68 + (0.9822738 \times X)$$
 
 ```{r}
 #| echo: true
-nueva_x <- 83.56
--12.8089426 + (0.1793443 * nueva_x)
+precio_dia_anterior <- 3140000
+50468.68 + (0.9822738 * precio_dia_anterior)
 ```
 
 ### Con R
@@ -549,7 +603,7 @@ nueva_x <- 83.56
 ```{r}
 #| echo: true
 datos_ejemplo <-
-  data.frame(longitud_cabeza = c(83.56))
+  data.frame(pinterno_dia_anterior = 3140000)
 
 predict(object = modelo, newdata = datos_ejemplo)
 ```
