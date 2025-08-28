@@ -21,6 +21,7 @@ intro_image_hide_on_mobile: true
 # Bases de datos
 
 - [Ejemplos para importación de datos](/temas/data/ejemplos-importacion.zip)
+- [TRM - 28 de agosto de 2025](/temas/data/TRM_20250828.csv)
 
 # Funciones auxiliares
 

@@ -19,6 +19,258 @@ format:
 css: estilo.css
 ---
 
+## ¿Para qué me sirve la regresión? 💡 {.smaller}
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 5
+#| fig-align: center
+
+# Cargar librerías necesarias
+library(ggplot2)
+
+# Datos simulados de rendimiento de maíz vs dosis de fertilizante NPK
+set.seed(123)
+dosis_npk <- seq(0, 300, by = 20)
+rendimiento <- 2.5 + 0.015 * dosis_npk + rnorm(length(dosis_npk), 0, 0.3)
+
+datos_maiz <- data.frame(
+  dosis_npk = dosis_npk,
+  rendimiento = rendimiento
+)
+
+# Gráfico de dispersión con regresión lineal
+ggplot(datos_maiz, aes(x = dosis_npk, y = rendimiento)) +
+  geom_point(size = 2, color = "#2E8B57", alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, color = "#FF6B35", linewidth = 1) +
+  labs(
+    title = "Regresión Lineal",
+    x = "Dosis de NPK (kg/ha)",
+    y = "Rendimiento (ton/ha)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 5
+#| fig-align: center
+
+# Datos simulados con respuesta no lineal (curva de respuesta)
+set.seed(123)
+dosis_npk_nl <- seq(0, 400, by = 20)
+rendimiento_nl <- 2.5 + 0.025 * dosis_npk_nl - 0.00004 * dosis_npk_nl^2 + rnorm(length(dosis_npk_nl), 0, 0.2)
+
+datos_maiz_nl <- data.frame(
+  dosis_npk = dosis_npk_nl,
+  rendimiento = rendimiento_nl
+)
+
+# Gráfico de dispersión con regresión no lineal
+ggplot(datos_maiz_nl, aes(x = dosis_npk, y = rendimiento)) +
+  geom_point(size = 2, color = "#2E8B57", alpha = 0.7) +
+  geom_smooth(method = "loess", se = TRUE, color = "#FF6B35", linewidth = 1) +
+  labs(
+    title = "Regresión No Lineal",
+    x = "Dosis de NPK (kg/ha)",
+    y = "Rendimiento (ton/ha)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+```
+
+:::
+
+::::
+
+## ¿Para qué me sirve la regresión? 💡 {.smaller}
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 5
+#| fig-align: center
+
+# Cargar librerías necesarias
+library(ggplot2)
+
+# Datos simulados de densidad de siembra vs rendimiento por planta
+set.seed(789)
+densidad <- seq(20, 120, by = 8)
+rendimiento_planta <- 0.8 - 0.004 * densidad + rnorm(length(densidad), 0, 0.05)
+
+datos_densidad <- data.frame(
+  densidad = densidad,
+  rendimiento_planta = rendimiento_planta
+)
+
+# Gráfico de dispersión con regresión lineal
+ggplot(datos_densidad, aes(x = densidad, y = rendimiento_planta)) +
+  geom_point(size = 2, color = "#4682B4", alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, color = "#FF6B35", linewidth = 1) +
+  labs(
+    title = "Regresión Lineal",
+    x = "Densidad de siembra (plantas/m²)",
+    y = "Rendimiento por planta (kg)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 5
+#| fig-align: center
+
+# Datos simulados con respuesta no lineal (competencia exponencial)
+set.seed(789)
+densidad_nl <- seq(20, 140, by = 8)
+rendimiento_planta_nl <- 0.8 * exp(-0.012 * densidad_nl) + rnorm(length(densidad_nl), 0, 0.03)
+
+datos_densidad_nl <- data.frame(
+  densidad = densidad_nl,
+  rendimiento_planta = rendimiento_planta_nl
+)
+
+# Gráfico de dispersión con regresión no lineal
+ggplot(datos_densidad_nl, aes(x = densidad, y = rendimiento_planta)) +
+  geom_point(size = 2, color = "#4682B4", alpha = 0.7) +
+  geom_smooth(method = "loess", se = TRUE, color = "#FF6B35", linewidth = 1) +
+  labs(
+    title = "Regresión No Lineal",
+    x = "Densidad de siembra (plantas/m²)",
+    y = "Rendimiento por planta (kg)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+```
+
+:::
+
+::::
+
+## ¿Para qué me sirve la regresión? 💡 {.smaller}
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 5
+#| fig-align: center
+
+# Cargar librerías necesarias
+library(ggplot2)
+
+# Datos simulados de dosis de insecticida vs conteo de plagas
+set.seed(456)
+dosis_insecticida <- seq(0, 200, by = 15)
+conteo_plagas <- 150 - 0.6 * dosis_insecticida + rnorm(length(dosis_insecticida), 0, 8)
+
+datos_plagas <- data.frame(
+  dosis_insecticida = dosis_insecticida,
+  conteo_plagas = conteo_plagas
+)
+
+# Gráfico de dispersión con regresión lineal inversa
+ggplot(datos_plagas, aes(x = dosis_insecticida, y = conteo_plagas)) +
+  geom_point(size = 2, color = "#8B0000", alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, color = "#FF6B35", linewidth = 1) +
+  labs(
+    title = "Regresión Lineal",
+    x = "Dosis de insecticida (ml/ha)",
+    y = "Conteo de plagas (individuos)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 5
+#| fig-align: center
+
+# Datos simulados con respuesta no lineal en forma de U (efecto hormético + resistencia)
+set.seed(456)
+dosis_insecticida_nl <- seq(0, 300, by = 15)
+conteo_plagas_nl <- 150 - 2 * dosis_insecticida_nl + 0.01 * dosis_insecticida_nl^2 + rnorm(length(dosis_insecticida_nl), 0, 8)
+
+datos_plagas_nl <- data.frame(
+  dosis_insecticida = dosis_insecticida_nl,
+  conteo_plagas = conteo_plagas_nl
+)
+
+# Gráfico de dispersión con regresión no lineal inversa
+ggplot(datos_plagas_nl, aes(x = dosis_insecticida, y = conteo_plagas)) +
+  geom_point(size = 2, color = "#8B0000", alpha = 0.7) +
+  geom_smooth(method = "loess", se = TRUE, color = "#FF6B35", linewidth = 1) +
+  labs(
+    title = "Regresión No Lineal",
+    x = "Dosis de insecticida (ml/ha)",
+    y = "Conteo de plagas (individuos)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+```
+
+:::
+
+::::
+
 ## ¿Para qué me sirve la regresión? 💡
 <html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
 
