@@ -271,6 +271,44 @@ ggplot(datos_plagas_nl, aes(x = dosis_insecticida, y = conteo_plagas)) +
 
 ::::
 
+## ¿Para qué me sirve la regresión? 💡 {.smaller}
+<html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
+
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 5
+#| fig-align: center
+
+library(tidyverse)
+datos_trm <- read_csv("../data/TRM_20250828.csv") |> 
+  mutate(VALOR = str_replace_all(VALOR, "\\$", ""),
+         VALOR = str_replace_all(VALOR, ",", ""),
+         VALOR = as.numeric(VALOR),
+         VIGENCIADESDE = dmy(VIGENCIADESDE),
+         VIGENCIAHASTA = dmy(VIGENCIAHASTA)) |> 
+  arrange(desc(VIGENCIADESDE)) |> 
+  slice(1:90) |> 
+  arrange(VIGENCIADESDE) |> 
+  mutate(trm_dia_anterior = lag(VALOR, n = 1))
+
+# Gráfico de dispersión con regresión lineal inversa
+ggplot(datos_trm, aes(x = trm_dia_anterior, y = VALOR)) +
+  geom_point(size = 2, color = "#8B0000", alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, color = "#FF6B35", linewidth = 1) +
+  labs(
+    title = "TRM último trimestre en Colombia",
+    x = "TRM (t-1)",
+    y = "TRM (t)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10)
+  )
+```
+
 ## ¿Para qué me sirve la regresión? 💡
 <html><div style='float:left'></div><hr color='#EB811B' size=1px></html> 
 

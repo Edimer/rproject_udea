@@ -22,6 +22,8 @@ intro_image_hide_on_mobile: true
 
 - [Ejemplos para importación de datos](/temas/data/ejemplos-importacion.zip)
 - [TRM - 28 de agosto de 2025](/temas/data/TRM_20250828.csv)
+- [Precios Fedecafeteros último trimestre](/temas/data/precios_cafe_fedecafeteros.csv)
+- [(Muestra) datos Saber 11 y Saber Pro - Colombia](/temas/data/datos_saber11_saberpro.csv)
 
 # Funciones auxiliares
 
