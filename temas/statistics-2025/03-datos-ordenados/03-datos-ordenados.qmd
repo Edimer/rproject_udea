@@ -2,7 +2,7 @@
 title: "Datos Ordenados"
 subtitle: "Estadística"
 author: "Edimer David Jaramillo"
-date: "2025-03-10"
+date: "2025-09-02"
 format:
   revealjs:
     scrollable: true
@@ -38,6 +38,69 @@ format:
 
 ::: footer
 Fuente de imagen: [*Tidy data for efficiency, reproducibility, and collaboration*](https://openscapes.org/blog/2020-10-12-tidy-data/)
+:::
+
+##
+
+::: footer
+[*Indicadores del Banco Mundial*](https://openscapes.org/blog/2020-10-12-tidy-data/)
+:::
+
+## Ejemplo 1: valores en los nombres de las columnas (1/2) {.smaller}
+
+![](https://r4ds.hadley.nz/diagrams/tidy-data/variables.png){fig-align="center" width="50%"}
+
+::: incremental
+
+- [Costos Fedearroz](https://fedearroz.com.co/es/fondo-nacional-del-arroz/investigaciones-economicas/estadisticas-arroceras/costos/)
+- [Estadísticas Fedecafeteros](https://federaciondecafeteros.org/wp/estadisticas-cafeteras/)
+- [Datos del Banco Mundial](https://datos.bancomundial.org/indicador)
+
+:::
+
+::: footer
+Fuente de imagen: [*R for Data Science (2e) - Chapter 5*](https://r4ds.hadley.nz/data-tidy.html)
+::: 
+
+## Ejemplo 2: variables en los nombres de las columnas (2/2) {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](https://r4ds.hadley.nz/diagrams/tidy-data/multiple-names.png){fig-align="center" width="90%"}
+:::
+::: {.column width="50%"}
+![](https://r4ds.hadley.nz/diagrams/tidy-data/names-and-values.png){fig-align="center" width="90%"}
+:::
+:::
+
+::: incremental
+
+- [Inventario de Ganado Bovino - Boyacá](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Inventario-de-Ganado-Bovino-DEPARTAMENTO-DE-BOYAC-/4wtf-sdh2/about_data)
+- [Inventario Poblacional Del Ganado Bovino Valle del Cauca](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Inventario-Poblacional-Del-Ganado-Bovino-Valle-del/65mn-ybz5/about_data)
+- [Inventario anual de Bovinos en Antioquia desde 2000](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Inventario-anual-de-Bovinos-en-Antioquia-desde-200/fy9z-8zxt/about_data)
+
+:::
+
+::: footer
+Fuente de imagen: [*R for Data Science (2e) - Chapter 5*](https://r4ds.hadley.nz/data-tidy.html)
+:::
+
+## Ejemplo 3: múltiples tablas para una misma unidad experimental {.smaller}
+
+![](https://blog.conholdate.com/total/combine-multiple-excel-files-into-one-using-java/images/combine-multiple-excel-files-into-one-using-java.jpg#center){fig-align="center" width="60%"}
+
+::: incremental
+
+- Frutales departamento del Valle del Cauca:
+  -  [Superficie Sembrada](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Superficie-sembrada-de-frutales-en-el-Valle-del-Ca/vmj9-n8gi/about_data)
+  - [Superficie Cosechada](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Superficie-cosechada-de-frutales-en-el-Valle-del-C/hasf-rpvk/about_data)
+  - [Producción en Toneladas](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Producci-n-de-frutales-en-el-Valle-del-Cauca/8xap-gecf/about_data)
+  - [Rendimiento en toneladas por hectárea](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Rendimiento-del-rea-cosechada-de-frutales-en-el-Va/ga4n-fzd9/about_data)
+
+:::
+
+::: footer
+Fuente de imagen: [*Merge Multiple Excel Files into One using REST API in Node.js*](https://blog.groupdocs.cloud/merger/merge-multiple-excel-files-into-one-using-rest-api-in-node-js/)
 :::
 
 ## *Tidy Data*
@@ -85,62 +148,6 @@ Fuente de imagen: [*Tidy data for efficiency, reproducibility, and collaboration
 ::: footer
 Fuente de imagen: [*R for Data Science (2e) - Chapter 5*](https://r4ds.hadley.nz/data-tidy.html)
 ::: 
-
-## Ejemplo 1: valores en los nombres de las columnas (1/2) {.smaller}
-
-![](https://r4ds.hadley.nz/diagrams/tidy-data/variables.png){fig-align="center" width="50%"}
-
-::: incremental
-
-- [Costos Fedearroz](https://fedearroz.com.co/es/fondo-nacional-del-arroz/investigaciones-economicas/estadisticas-arroceras/costos/)
-- [Datos del Banco Mundial](https://datos.bancomundial.org/indicador)
-
-:::
-
-::: footer
-Fuente de imagen: [*R for Data Science (2e) - Chapter 5*](https://r4ds.hadley.nz/data-tidy.html)
-::: 
-
-## Ejemplo 2: variables en los nombres de las columnas (2/2) {.smaller}
-
-::: columns
-::: {.column width="50%"}
-![](https://r4ds.hadley.nz/diagrams/tidy-data/multiple-names.png){fig-align="center" width="90%"}
-:::
-::: {.column width="50%"}
-![](https://r4ds.hadley.nz/diagrams/tidy-data/names-and-values.png){fig-align="center" width="90%"}
-:::
-:::
-
-::: incremental
-
-- [Inventario de Ganado Bovino - Boyacá](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Inventario-de-Ganado-Bovino-DEPARTAMENTO-DE-BOYAC-/4wtf-sdh2/about_data)
-- [Inventario Poblacional Del Ganado Bovino Valle del Cauca](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Inventario-Poblacional-Del-Ganado-Bovino-Valle-del/65mn-ybz5/about_data)
-- [Inventario anual de Bovinos en Antioquia desde 2000](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Inventario-anual-de-Bovinos-en-Antioquia-desde-200/fy9z-8zxt/about_data)
-
-:::
-
-::: footer
-Fuente de imagen: [*R for Data Science (2e) - Chapter 5*](https://r4ds.hadley.nz/data-tidy.html)
-:::
-
-## Ejemplo 3: múltiples tablas para una misma unidad experimental {.smaller}
-
-![](https://blog.conholdate.com/total/combine-multiple-excel-files-into-one-using-java/images/combine-multiple-excel-files-into-one-using-java.jpg#center){fig-align="center" width="60%"}
-
-::: incremental
-
-- Raíces Bulbos y Tubérculos en el departamento del Valle del Cauca:
-  -  [Superficie Sembrada](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Superficie-Sembrada-con-Ra-ces-Bulbos-y-Tub-rculos/h7vs-gf6t/about_data)
-  - [Superficie Cosechada](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Superficie-Cosechada-con-Ra-ces-Bulbos-y-Tub-rculo/2uev-8vbt/about_data)
-  - [Producción en Toneladas](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Producci-n-en-Toneladas-por-Hect-reas-de-Ra-ces-Bu/hg7h-itmt/about_data)
-  - [Rendimiento en toneladas por hectárea](https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Rendimiento-en-toneladas-por-hect-reas-en-Cultivos/239z-ikj9/about_data)
-
-:::
-
-::: footer
-Fuente de imagen: [*Merge Multiple Excel Files into One using REST API in Node.js*](https://blog.groupdocs.cloud/merger/merge-multiple-excel-files-into-one-using-rest-api-in-node-js/)
-:::
 
 ## En conclusión...
 
