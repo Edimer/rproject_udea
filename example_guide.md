@@ -28,3 +28,10 @@ intro_image_hide_on_mobile: true
 # Funciones auxiliares
 
 - [Función para diagramas de Venn con R](/temas/Guides/examples_statistics/diagramas_venn.R)
+
+# Podcast con IA - Estadística
+
+- [01-Introducción (versión corta)](https://www.youtube.com/watch?v=qzgYJ2bvqDA)
+- [01-Introducción (versión larga)](https://www.youtube.com/watch?v=hwKn6KB6iOo%7D)
+
+# Podcas con IA- Diseño Experimental
