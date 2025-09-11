@@ -355,6 +355,28 @@
     color: $white;
     transform: translateY(-1px);
   }
+  
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: transparent;
+    color: $steel;
+    border-color: $gray-medium;
+    
+    &:hover {
+      background: transparent;
+      color: $steel;
+      border-color: $gray-medium;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  
+  &.always-visible {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
 }
 
 // Responsive Design
