@@ -1,0 +1,150 @@
+---
+layout: default
+bodyClass: page-recursos-moderno
+---
+
+<div class="recursos-hero">
+  <div class="container">
+    <div class="recursos-hero-content">
+      <div class="recursos-hero-text">
+        <h1 class="recursos-hero-title">Recursos de Información</h1>
+        <p class="recursos-hero-subtitle">Material bibliográfico y recursos web de apoyo para los cursos</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contenido de recursos -->
+<div class="recursos-content">
+  <div class="container">
+    <div class="recursos-container">
+      <div class="recursos-grid" id="recursos-grid">
+        <!-- Las tarjetas se generarán dinámicamente -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript para funcionalidad -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Datos de recursos agrupados por categorías
+  const recursosData = [
+    {
+      title: "Herramientas Principales",
+      description: "Software y plataformas esenciales para trabajar con R y ciencia de datos",
+      badge: "Fundamental",
+      links: [
+        { name: "Descargar R y RStudio", url: "https://posit.co/download/rstudio-desktop/" },
+        { name: "Posit Cloud", url: "https://posit.cloud/" },
+        { name: "Descargar Quarto", url: "https://quarto.org/docs/get-started/" }
+      ]
+    },
+    {
+      title: "Libros de Estadística con R",
+      description: "Libros fundamentales para aprender estadística y análisis de datos con R",
+      badge: "Educativo",
+      links: [
+        { name: "R para Ciencia de Datos", url: "https://es.r4ds.hadley.nz/" },
+        { name: "Estadística básica edulcorada", url: "https://bookdown.org/aquintela/EBE/" },
+        { name: "R Graphics Cookbook, 2nd edition", url: "https://r-graphics.org/" },
+        { name: "Data Visualization - A practical introduction", url: "https://socviz.co/" },
+        { name: "Fundamentals of Data Visualization", url: "https://clauswilke.com/dataviz/" },
+        { name: "Modelos Estadísticos", url: "https://bookdown.org/j_morales/librostat/" },
+        { name: "Modelos de Regresión con R", url: "https://fhernanb.github.io/libro_regresion/" },
+        { name: "Statistical Inference via Data Science: A ModernDive into R and the Tidyverse", url: "https://moderndive.com/" },
+        { name: "Modern Statistics for Modern Biology", url: "https://web.stanford.edu/class/bios221/book/" },
+        { name: "Beyond Multiple Linear Regression: Applied Generalized Linear Models and Multilevel Models in R", url: "https://bookdown.org/roback/bookdown-BeyondMLR/" },
+        { name: "Statistics handbook for a data analyst", url: "https://bookdown.org/mpfoley1973/statistics/" },
+        { name: "Introduction to Data Science", url: "http://rafalab.dfci.harvard.edu/dsbook/" }
+      ]
+    },
+    {
+      title: "Recursos Web",
+      description: "Sitios web y comunidades útiles para aprendizaje y soporte",
+      badge: "Web",
+      links: [
+        { name: "Stack Overflow en inglés", url: "https://stackoverflow.com/" },
+        { name: "Stack Overflow en español", url: "https://es.stackoverflow.com/" },
+        { name: "Rpubs", url: "https://rpubs.com/" },
+        { name: "CRAN", url: "https://cran.r-project.org/" },
+        { name: "R-Studio", url: "https://www.rstudio.com/" },
+        { name: "DataCamp", url: "https://www.datacamp.com/" },
+        { name: "Github", url: "https://github.com/" },
+        { name: "edX", url: "https://www.edx.org/es/course/subject/data-analysis-statistics" },
+        { name: "R-Exercises", url: "https://www.r-exercises.com/" },
+        { name: "R-bloggers", url: "https://www.r-bloggers.com/" }
+      ]
+    },
+    {
+      title: "Guías y Cheat Sheets",
+      description: "Guías rápidas y documentación para referencia rápida",
+      badge: "Guía",
+      links: [
+        { name: "RStudio IDE", url: "https://rstudio.github.io/cheatsheets/translations/spanish/rstudio-ide_es.pdf" },
+        { name: "Introducción a R", url: "https://rstudio.github.io/cheatsheets/translations/spanish/introduccion-a-r.pdf" },
+        { name: "Importar datos con readr", url: "https://rstudio.github.io/cheatsheets/translations/spanish/data-import_es.pdf" },
+        { name: "Manejo de datos con dplyr", url: "https://rstudio.github.io/cheatsheets/translations/spanish/data-transformation_es.pdf" },
+        { name: "Manejo de datos con dplyr y tidyr", url: "https://rstudio.github.io/cheatsheets/translations/spanish/data-wrangling_es.pdf" },
+        { name: "Visualización ggplot2", url: "https://rstudio.github.io/cheatsheets/translations/spanish/data-visualization_es.pdf" },
+        { name: "R Markdown", url: "https://rstudio.github.io/cheatsheets/translations/spanish/rmarkdown_es.pdf" },
+        { name: "Estadística descriptiva con R", url: "https://rstudio.github.io/cheatsheets/translations/spanish/estadistica-descriptiva-con-R.pdf" },
+        { name: "Base R", url: "https://rstudio.github.io/cheatsheets/translations/spanish/base-r_es.pdf" },
+        { name: "Manipulación de texto con stringr", url: "https://rstudio.github.io/cheatsheets/translations/spanish/strings_es.pdf" },
+        { name: "Manejo de factores (variables categóricas) en R", url: "https://rstudio.github.io/cheatsheets/translations/spanish/factors_es.pdf" }
+      ]
+    },
+    {
+      title: "Recomendaciones y Canales",
+      description: "Conferencias, proyectos y canales recomendados para aprendizaje",
+      badge: "Multimedia",
+      links: [
+        { name: "Conferencia TED: Las mejores estadísticas que jamás hayas visto", url: "https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen" },
+        { name: "Proyecto Gapminder.org", url: "https://www.gapminder.org/tools/" },
+        { name: "Página web Semillero RPyCol", url: "https://semillerorpy.netlify.app/" },
+        { name: "Canal de Youtube: Estadística útil", url: "https://www.youtube.com/@fhernanb1" },
+        { name: "Canal de Youtube: Dot CSV", url: "https://www.youtube.com/@DotCSV" },
+        { name: "Canal de Youtube: RPyCol", url: "https://www.youtube.com/@rpycol/videos" }
+      ]
+    }
+  ];
+  
+  // Función para crear tarjetas de recursos con múltiples enlaces
+  function createRecursoCard(recurso) {
+    return `
+      <div class="recurso-card">
+        <div class="card-header">
+          <h3 class="card-title">${recurso.title}</h3>
+          ${recurso.badge ? `<span class="card-badge ${recurso.badge.toLowerCase()}">${recurso.badge}</span>` : ''}
+        </div>
+        
+        <p class="card-description">${recurso.description}</p>
+        
+        <div class="links-list">
+          ${recurso.links.map(link => `
+            <a href="${link.url}" class="resource-link" target="_blank">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              ${link.name}
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+  
+  // Renderizar tarjetas
+  function renderCards() {
+    const grid = document.getElementById('recursos-grid');
+    if (grid) {
+      grid.innerHTML = recursosData.map(createRecursoCard).join('');
+    }
+  }
+  
+  // Inicializar
+  renderCards();
+});
+</script>

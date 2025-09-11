@@ -1,0 +1,284 @@
+---
+layout: default
+bodyClass: page-guias-datos-moderno
+---
+
+<div class="guias-datos-hero">
+  <div class="container">
+    <div class="guias-datos-hero-content">
+      <div class="guias-datos-hero-text">
+        <h1 class="guias-datos-hero-title">Guías y Datos</h1>
+        <p class="guias-datos-hero-subtitle">Recursos educativos, bases de datos y material de apoyo para tus cursos</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sistema de pestañas -->
+<div class="guias-datos-tabs">
+  <div class="container">
+    <div class="tabs-container">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="guias">Guías</button>
+        <button class="tab-btn" data-tab="bases-datos">Bases de Datos</button>
+        <button class="tab-btn" data-tab="funciones">Funciones Auxiliares</button>
+        <button class="tab-btn" data-tab="podcast-estadistica">Podcast - Estadística</button>
+        <button class="tab-btn" data-tab="podcast-diseno">Podcast - Diseño Experimental</button>
+      </div>
+      
+      <!-- Contenido de pestañas -->
+      <div class="tab-content">
+        <!-- Tab: Guías -->
+        <div class="tab-pane active" id="guias">
+          <div class="section-header">
+            <h2>Guías y Tutoriales</h2>
+          </div>
+          
+          <div class="recursos-grid" id="guias-grid">
+            <!-- Las tarjetas se generarán dinámicamente -->
+          </div>
+        </div>
+        
+        <!-- Tab: Bases de Datos -->
+        <div class="tab-pane" id="bases-datos">
+          <div class="section-header">
+            <h2>Bases de Datos</h2>
+          </div>
+          
+          <div class="recursos-grid" id="bases-datos-grid">
+            <!-- Las tarjetas se generarán dinámicamente -->
+          </div>
+        </div>
+        
+        <!-- Tab: Funciones Auxiliares -->
+        <div class="tab-pane" id="funciones">
+          <div class="section-header">
+            <h2>Funciones Auxiliares</h2>
+          </div>
+          
+          <div class="recursos-grid" id="funciones-grid">
+            <!-- Las tarjetas se generarán dinámicamente -->
+          </div>
+        </div>
+        
+        <!-- Tab: Podcast Estadística -->
+        <div class="tab-pane" id="podcast-estadistica">
+          <div class="section-header">
+            <h2>Podcast con IA - Estadística</h2>
+          </div>
+          
+          <div class="recursos-grid" id="podcast-estadistica-grid">
+            <!-- Las tarjetas se generarán dinámicamente -->
+          </div>
+        </div>
+        
+        <!-- Tab: Podcast Diseño Experimental -->
+        <div class="tab-pane" id="podcast-diseno">
+          <div class="section-header">
+            <h2>Podcast con IA - Diseño Experimental</h2>
+          </div>
+          
+          <div class="recursos-grid" id="podcast-diseno-grid">
+            <!-- Las tarjetas se generarán dinámicamente -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript para funcionalidad -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Datos de recursos (esto vendría de tu CMS o se generaría dinámicamente)
+  const recursosData = {
+    guias: [
+      {
+        title: "Instalar bibliotecas en R desde RStudio",
+        description: "Guía paso a paso para instalar paquetes y bibliotecas en R",
+        link: "/temas/Guides/01-InstallPackage.html",
+        type: "html",
+        badge: "Instalación"
+      },
+      {
+        title: "Creación de póster con R",
+        description: "Plantilla y guía para crear pósteres científicos con R",
+        link: "/temas/Guides/examples_experimental_design/poster-plantilla.zip",
+        type: "download",
+        badge: "Tutorial"
+      },
+      {
+        title: "Plantilla R Markdown",
+        description: "Plantilla base para documentos R Markdown",
+        link: "/temas/Guides/00-plantila-rmarkdown.zip",
+        type: "download",
+        badge: "Recurso"
+      },
+      {
+        title: "Plantilla Quarto",
+        description: "Plantilla para documentos Quarto",
+        link: "/temas/Guides/plantilla-quarto.zip",
+        type: "download",
+        badge: "Recurso"
+      },
+      {
+        title: "Guía Arduino Science Journal",
+        description: "Tutorial para usar Arduino Science Journal en experiments",
+        link: "https://rpubs.com/Edimer/954711",
+        type: "external",
+        badge: "Tutorial"
+      },
+      {
+        title: "Plantillas R Markdown, Quarto y Flexdashboard",
+        description: "Paquete completo de plantillas para diferentes formatos",
+        link: "/temas/Guides/plantillas-R-udea.zip",
+        type: "download",
+        badge: "Recurso"
+      },
+      {
+        title: "Plantillas tableros de datos",
+        description: "Plantillas para crear dashboards y visualizaciones",
+        link: "/temas/Guides/plantillas-tableros.zip",
+        type: "download",
+        badge: "Visualización"
+      }
+    ],
+    "bases-datos": [
+      {
+        title: "Ejemplos para importación de datos",
+        description: "Conjunto de datos de ejemplo para practicar importación",
+        link: "/temas/data/ejemplos-importacion.zip",
+        type: "download",
+        badge: "Práctica"
+      },
+      {
+        title: "TRM - 28 de agosto de 2025",
+        description: "Tasa Representativa del Mercado colombiana",
+        link: "/temas/data/TRM_20250828.csv",
+        type: "download",
+        badge: "Datos Reales"
+      },
+      {
+        title: "Precios Fedecafeteros último trimestre",
+        description: "Datos históricos de precios del café",
+        link: "/temas/data/precios_cafe_fedecafeteros.csv",
+        type: "download",
+        badge: "Agrícola"
+      },
+      {
+        title: "Muestra datos Saber 11 y Saber Pro - Colombia",
+        description: "Dataset con resultados de pruebas Saber",
+        link: "/temas/data/datos_saber11_saberpro.csv",
+        type: "download",
+        badge: "Educativo"
+      }
+    ],
+    funciones: [
+      {
+        title: "Función para diagramas de Venn con R",
+        description: "Función auxiliar para crear diagramas de Venn",
+        link: "/temas/Guides/examples_statistics/diagramas_venn.R",
+        type: "download",
+        badge: "Utilidad"
+      }
+    ],
+    "podcast-estadistica": [
+      {
+        title: "01-Introducción (versión corta)",
+        description: "Introducción a la Estadística - Versión resumida",
+        link: "https://www.youtube.com/watch?v=qzgYJ2bvqDA",
+        type: "external",
+        badge: "Video"
+      },
+      {
+        title: "01-Introducción (versión larga)",
+        description: "Introducción a la Estadística - Versión completa",
+        link: "https://www.youtube.com/watch?v=hwKn6KB6iOo",
+        type: "external",
+        badge: "Video"
+      }
+    ],
+    "podcast-diseno": [
+      {
+        title: "Podcast Diseño Experimental",
+        description: "Contenido de IA sobre Diseño Experimental",
+        link: "#",
+        type: "external",
+        badge: "Próximamente"
+      }
+    ]
+  };
+  
+  // Función para crear tarjetas de recursos
+  function createRecursoCard(recurso) {
+    const iconMap = {
+      html: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+        <line x1="8" y1="21" x2="16" y2="21"></line>
+        <line x1="12" y1="17" x2="12" y2="21"></line>
+      </svg>`,
+      download: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>`,
+      external: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+        <polyline points="15 3 21 3 21 9"></polyline>
+        <line x1="10" y1="14" x2="21" y2="3"></line>
+      </svg>`
+    };
+    
+    const buttonText = {
+      html: "Ver Guía",
+      download: "Descargar",
+      external: "Abrir"
+    };
+    
+    return `
+      <div class="recurso-card">
+        <div class="card-header">
+          <h3 class="card-title">${recurso.title}</h3>
+          ${recurso.badge ? `<span class="card-badge ${recurso.badge.toLowerCase()}">${recurso.badge}</span>` : ''}
+        </div>
+        
+        <p class="card-description">${recurso.description}</p>
+        
+        <div class="card-actions">
+          <a href="${recurso.link}" class="btn btn-primary" target="_blank">
+            ${iconMap[recurso.type] || iconMap.external}
+            ${buttonText[recurso.type] || "Abrir"}
+          </a>
+        </div>
+      </div>
+    `;
+  }
+  
+  // Renderizar tarjetas iniciales
+  function renderCards() {
+    Object.keys(recursosData).forEach(categoria => {
+      const grid = document.getElementById(`${categoria}-grid`);
+      if (grid && recursosData[categoria]) {
+        grid.innerHTML = recursosData[categoria].map(createRecursoCard).join('');
+      }
+    });
+  }
+  
+  // Funcionalidad de pestañas
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Remover active de todos
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      
+      // Agregar active al actual
+      this.classList.add('active');
+      const tabId = this.getAttribute('data-tab');
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+  
+  // Inicializar
+  renderCards();
+});
+</script>

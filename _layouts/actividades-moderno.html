@@ -1,0 +1,158 @@
+---
+layout: default
+bodyClass: page-actividades-moderno
+---
+
+<div class="actividades-hero">
+  <div class="container">
+    <div class="actividades-hero-content">
+      <div class="actividades-hero-text">
+        <h1 class="actividades-hero-title">Actividades</h1>
+        <p class="actividades-hero-subtitle">Actividades prácticas y ejercicios para ambos cursos</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sistema de pestañas -->
+<div class="actividades-tabs">
+  <div class="container">
+    <div class="tabs-container">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="estadistica">Estadística</button>
+        <button class="tab-btn" data-tab="diseno-experimental">Diseño Experimental</button>
+      </div>
+      
+      <!-- Contenido de pestañas -->
+      <div class="tab-content">
+        <!-- Tab: Estadística -->
+        <div class="tab-pane active" id="estadistica">
+          <div class="section-header">
+            <h2>Actividades - Estadística</h2>
+          </div>
+          
+          <div class="actividades-grid" id="estadistica-grid">
+            <!-- Las tarjetas se generarán dinámicamente -->
+          </div>
+        </div>
+        
+        <!-- Tab: Diseño Experimental -->
+        <div class="tab-pane" id="diseno-experimental">
+          <div class="section-header">
+            <h2>Actividades - Diseño Experimental</h2>
+          </div>
+          
+          <div class="actividades-grid" id="diseno-experimental-grid">
+            <!-- Las tarjetas se generarán dinámicamente -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript para funcionalidad -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Datos de actividades
+  const actividadesData = {
+    estadistica: [
+      {
+        title: "Actividad 01",
+        description: "Primera actividad del curso de Estadística 2025",
+        link: "#",
+        type: "pending",
+        badge: "Próximamente"
+      }
+    ],
+    "diseno-experimental": [
+      {
+        title: "Actividad 01", 
+        description: "Primera actividad del curso de Diseño Experimental 2025",
+        link: "#",
+        type: "pending",
+        badge: "Próximamente"
+      }
+    ]
+  };
+  
+  // Función para crear tarjetas de actividades
+  function createActividadCard(actividad) {
+    const iconMap = {
+      html: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+        <line x1="8" y1="21" x2="16" y2="21"></line>
+        <line x1="12" y1="17" x2="12" y2="21"></line>
+      </svg>`,
+      download: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>`,
+      external: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+        <polyline points="15 3 21 3 21 9"></polyline>
+        <line x1="10" y1="14" x2="21" y2="3"></line>
+      </svg>`,
+      pending: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>`
+    };
+    
+    const buttonText = {
+      html: "Ver Actividad",
+      download: "Descargar",
+      external: "Abrir",
+      pending: "Próximamente"
+    };
+    
+    const isDisabled = actividad.type === 'pending';
+    
+    return `
+      <div class="actividad-card">
+        <div class="card-header">
+          <h3 class="card-title">${actividad.title}</h3>
+          ${actividad.badge ? `<span class="card-badge ${actividad.badge.toLowerCase()}">${actividad.badge}</span>` : ''}
+        </div>
+        
+        <p class="card-description">${actividad.description}</p>
+        
+        <div class="card-actions">
+          <a href="${actividad.link}" class="btn ${isDisabled ? 'btn-disabled' : 'btn-primary'}" target="_blank" ${isDisabled ? 'onclick="return false;"' : ''}>
+            ${iconMap[actividad.type] || iconMap.external}
+            ${buttonText[actividad.type] || "Abrir"}
+          </a>
+        </div>
+      </div>
+    `;
+  }
+  
+  // Renderizar tarjetas iniciales
+  function renderCards() {
+    Object.keys(actividadesData).forEach(categoria => {
+      const grid = document.getElementById(`${categoria}-grid`);
+      if (grid && actividadesData[categoria]) {
+        grid.innerHTML = actividadesData[categoria].map(createActividadCard).join('');
+      }
+    });
+  }
+  
+  // Funcionalidad de pestañas
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Remover active de todos
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      
+      // Agregar active al actual
+      this.classList.add('active');
+      const tabId = this.getAttribute('data-tab');
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+  
+  // Inicializar
+  renderCards();
+});
+</script>

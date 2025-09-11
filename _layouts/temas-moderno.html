@@ -1,0 +1,185 @@
+---
+layout: default
+bodyClass: page-temas-moderno
+---
+
+<div class="temas-hero">
+  <div class="container">
+    <div class="temas-hero-content">
+      <div class="temas-hero-text">
+        <h1 class="temas-hero-title">Temas</h1>
+        <p class="temas-hero-subtitle">Explora nuestro material educativo de Estadística y Diseño Experimental</p>
+      </div>
+      
+      </div>
+  </div>
+</div>
+
+<!-- Sistema de pestañas -->
+<div class="temas-tabs">
+  <div class="container">
+    <div class="tabs-container">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="estadistica">Estadística</button>
+        <button class="tab-btn" data-tab="diseno-experimental">Diseño Experimental</button>
+      </div>
+      
+      <!-- Contenido de pestañas -->
+      <div class="tab-content">
+        <!-- Tab: Estadística -->
+        <div class="tab-pane active" id="estadistica">
+          <div class="section-header">
+            <h2>Estadística</h2>
+          </div>
+          
+          <div class="temas-grid" id="estadistica-grid">
+            <!-- Las tarjetas se generarán dinámicamente -->
+          </div>
+        </div>
+        
+        <!-- Tab: Diseño Experimental -->
+        <div class="tab-pane" id="diseno-experimental">
+          <div class="section-header">
+            <h2>Diseño Experimental</h2>
+          </div>
+          
+          <div class="temas-grid" id="diseno-grid">
+            <!-- Las tarjetas se generarán dinámicamente -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript para funcionalidad -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Datos de temas (esto vendría de tu CMS o se generaría dinámicamente)
+  const temasData = {
+    estadistica: [
+      {
+        title: "Presentación del curso",
+        description: "Introducción al curso de Estadística 2025",
+        slides: "/temas/statistics-2025/01-curso/01-curso.html",
+        examples: null,
+        badge: "Presentación"
+      },
+      {
+        title: "Introducción a R y RStudio",
+        description: "Conceptos básicos de R y configuración del entorno",
+        slides: "/temas/statistics-2025/02-R-RStudio/01-r-rstudio.html",
+        examples: null,
+        badge: "Fundamental"
+      },
+      {
+        title: "Importación de datos",
+        description: "Técnicas para importar datos desde diferentes fuentes",
+        slides: null,
+        examples: "https://edimer.quarto.pub/importar-datos-r-202502/",
+        badge: "Importar"
+      },
+      {
+        title: "Datos ordenados",
+        description: "Tidy data y organización de conjuntos de datos",
+        slides: "/temas/statistics-2025/03-datos-ordenados/03-datos-ordenados.html",
+        examples: "https://edimer.quarto.pub/ordenacion-de-datos/",
+        badge: "Fundamental"
+      }
+    ],
+    "diseno-experimental": [
+      {
+        title: "Presentación del curso",
+        description: "Introducción al Diseño Experimental 2025",
+        slides: "/temas/DisExperimental-2025/01-presentacion-curso.html",
+        examples: null,
+        badge: "Presentación"
+      },
+      {
+        title: "Introducción",
+        description: "Conceptos fundamentales de diseño experimental",
+        slides: "/temas/DisExperimental-2025/02-introduccion.html",
+        examples: null,
+        badge: "Fundamental"
+      },
+      {
+        title: "Regresión Lineal Simple",
+        description: "Análisis de regresión lineal simple",
+        slides: "/temas/DisExperimental-2025/03-regresion-lineal-simple.html",
+        examples: "https://edimer.quarto.pub/regresion-lineal-simple-1/",
+        badge: "Fundamental"
+      }
+    ]
+  };
+  
+  // Función para crear tarjetas
+  function createCard(tema) {
+    return `
+      <div class="tema-card">
+        <div class="card-header">
+          <h3 class="card-title">${tema.title}</h3>
+          ${tema.badge ? `<span class="card-badge ${tema.badge.toLowerCase()}">${tema.badge}</span>` : ''}
+        </div>
+        
+        <p class="card-description">${tema.description}</p>
+        
+        <div class="card-actions">
+          ${tema.slides ? `
+            <a href="${tema.slides}" class="btn btn-primary" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              Diapositivas
+            </a>
+          ` : ''}
+          ${tema.examples ? `
+            <a href="${tema.examples}" class="btn btn-secondary" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 12 12 15 9 14 9"></polyline>
+              </svg>
+              Ejemplos
+            </a>
+          ` : ''}
+        </div>
+      </div>
+    `;
+  }
+  
+  // Renderizar tarjetas iniciales
+  function renderCards() {
+    const estadisticaGrid = document.getElementById('estadistica-grid');
+    const disenoGrid = document.getElementById('diseno-grid');
+    
+    if (temasData.estadistica) {
+      estadisticaGrid.innerHTML = temasData.estadistica.map(createCard).join('');
+    }
+    
+    if (temasData['diseno-experimental']) {
+      disenoGrid.innerHTML = temasData['diseno-experimental'].map(createCard).join('');
+    }
+  }
+  
+  // Funcionalidad de pestañas
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Remover active de todos
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      
+      // Agregar active al actual
+      this.classList.add('active');
+      const tabId = this.getAttribute('data-tab');
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+  
+  // Inicializar
+  renderCards();
+});
+</script>

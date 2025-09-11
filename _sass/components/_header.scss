@@ -1,17 +1,28 @@
 .header {
-  color: $primary;
-  background-color: #ffffff;
+  color: $black;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
-  border-bottom: 1px solid $white-offset;
-  padding: 10px 0px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid $gray-medium;
+  padding: 1rem 0px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  
+  &:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
   &.header-absolute {
     position: absolute;
     z-index: 10;

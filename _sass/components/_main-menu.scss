@@ -7,26 +7,58 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    gap: 0.5rem;
     > li {
       list-style: none;
-      font-size: 1rem;
+      font-size: 0.95rem;
+      font-family: $font-family-heading;
+      font-weight: 500;
       > a {
-        padding: 10px 12px 10px 12px;
+        padding: 0.75rem 1rem;
         display: inline-block;
-        font-weight: normal;
+        font-weight: 500;
         text-decoration: none;
-        color: $primary;
+        color: $black;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        position: relative;
+        
         &:hover {
-          text-decoration: underline;
+          background-color: $gray-light;
+          color: $primary;
+          text-decoration: none;
+          transform: translateY(-1px);
+        }
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background: $primary;
+          transition: all 0.3s ease;
+          transform: translateX(-50%);
+        }
+        
+        &:hover::after {
+          width: 80%;
         }
       }
       &.active {
         > a {
-          font-weight: bold;
-          text-decoration: none;
+          background-color: $primary;
+          color: $white;
+          font-weight: 600;
+          
           &:hover {
-            text-decoration: none;
-            transition: all 225ms ease-in 0s;
+            background-color: darken($primary, 10%);
+            color: $white;
+          }
+          
+          &::after {
+            background: $white;
           }
         }
       }

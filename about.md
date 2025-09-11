@@ -1,9 +1,7 @@
 ---
 title: Recursos de Información
-layout: 'page'
+layout: recursos-moderno
 ---
-
-En esta sección usted podrá encontrar material bibliogŕafico de apoyo para los temas abordados durante el semestre.
 
 # [Descargar R y RStudio](https://posit.co/download/rstudio-desktop/)
 

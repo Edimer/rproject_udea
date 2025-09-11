@@ -1,0 +1,418 @@
+// Página Moderna de Inicio
+
+// Importar estilos base de temas para mantener congruencia
+@import 'temas-moderno';
+
+// Hero Section - Similar a los demás pero adaptado para inicio
+.inicio-hero {
+  background: linear-gradient(135deg, $black 0%, #111827 100%);
+  color: $white;
+  padding: 4rem 0 3rem;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.inicio-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.inicio-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inicio-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: $font-family-heading;
+  line-height: 1.2;
+  
+  @include media-breakpoint-up(md) {
+    font-size: 3.5rem;
+  }
+}
+
+.inicio-hero-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.inicio-hero-description {
+  font-size: 1rem;
+  opacity: 0.8;
+  line-height: 1.6;
+  
+  p {
+    margin: 0;
+  }
+}
+
+.inicio-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.inicio-hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @include media-breakpoint-down(lg) {
+    order: -1;
+  }
+}
+
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: rgba($primary, 0.1);
+    border-radius: 20px;
+    z-index: -1;
+  }
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+// Sección de Cursos
+.cursos-section {
+  background: $white-offset;
+  padding: 4rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $black;
+    margin: 0 0 1rem 0;
+    font-family: $font-family-heading;
+  }
+  
+  p {
+    font-size: 1.125rem;
+    color: $steel;
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.curso-card {
+  background: $white;
+  border: 1px solid $gray-medium;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    border-color: $primary;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.curso-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  background: rgba($primary, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary;
+  
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.curso-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $black;
+  margin: 0 0 1rem 0;
+  font-family: $font-family-heading;
+}
+
+.curso-card p {
+  font-size: 0.875rem;
+  color: $steel;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.curso-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $primary;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    gap: 0.75rem;
+    color: $secondary;
+  }
+}
+
+// Sección de Recursos Destacados
+.recursos-section {
+  background: $white;
+  padding: 4rem 0;
+}
+
+.recursos-destacados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.recurso-destacado {
+  background: $gray-light;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba($primary, 0.05);
+    transform: translateY(-2px);
+  }
+}
+
+.recurso-content {
+  position: relative;
+}
+
+.recurso-badge {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  background: rgba($secondary, 0.1);
+  color: $secondary;
+}
+
+.recurso-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: $black;
+  margin: 0 0 1rem 0;
+  font-family: $font-family-heading;
+}
+
+.recurso-content p {
+  font-size: 0.875rem;
+  color: $steel;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.recurso-content .recurso-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $primary;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.813rem;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    gap: 0.75rem;
+    color: $secondary;
+  }
+}
+
+// Botones
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.btn-primary {
+  background: $primary;
+  color: $white;
+  border-color: $primary;
+  
+  &:hover {
+    background: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba($primary, 0.3);
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  color: $white;
+  border-color: $white;
+  
+  &:hover {
+    background: $white;
+    color: $primary;
+    transform: translateY(-1px);
+  }
+}
+
+// Responsive Design
+@include media-breakpoint-down(sm) {
+  .inicio-hero {
+    padding: 2rem 0;
+  }
+  
+  .inicio-hero-title {
+    font-size: 2rem;
+  }
+  
+  .inicio-hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .inicio-actions {
+    flex-direction: column;
+    width: 100%;
+    
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  .hero-image-container {
+    max-width: 300px;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .cursos-grid,
+  .recursos-destacados {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+// Animaciones
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.curso-card,
+.recurso-destacado {
+  animation: fadeInUp 0.6s ease forwards;
+  
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+.inicio-hero-text {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.inicio-hero-image {
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
