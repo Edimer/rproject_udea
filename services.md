@@ -34,6 +34,7 @@ layout: temas-moderno
         <a href="/temas/Statistics-2025/03-datos-ordenados/03-datos-ordenados.html" class="btn btn-primary" target="_blank">Ver Diapositivas</a>
         <a href="https://edimer.quarto.pub/ordenacion-de-datos/" class="btn btn-secondary" target="_blank">Ver Ejemplos</a>
       </div>
+
     </div>
     
     <h2>Temas de Diseño Experimental 2025</h2>

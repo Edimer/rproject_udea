@@ -2,7 +2,7 @@
 title: "Manejo de datos"
 subtitle: "Estadística"
 author: "Edimer David Jaramillo"
-date: "2025-03-25"
+date: "2025-09-15"
 format:
   revealjs:
     scrollable: true
