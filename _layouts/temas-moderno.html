@@ -76,14 +76,26 @@ document.addEventListener('DOMContentLoaded', function() {
         title: "Importación de datos",
         description: "Técnicas para importar datos desde diferentes fuentes",
         slides: "/temas/statistics-2025/02-R-RStudio/01-r-rstudio.html",
-        examples: "https://edimer.quarto.pub/importar-datos-r-202502/",
+        examples: [
+          {
+            url: "https://edimer.quarto.pub/importar-datos-r-202502/",
+            title: "Ejemplos con R",
+            description: "Ejemplo práctico de importación"
+          }
+        ],
         badge: "Importar"
       },
       {
         title: "Datos ordenados",
         description: "Tidy data y organización de conjuntos de datos",
         slides: "/temas/statistics-2025/03-datos-ordenados/03-datos-ordenados.html",
-        examples: "https://edimer.quarto.pub/ordenacion-de-datos/",
+        examples: [
+          {
+            url: "https://edimer.quarto.pub/ordenacion-de-datos/",
+            title: "Ejemplos con R",
+            description: "Ordenamiento de datos"
+          }
+        ],
         badge: "Fundamental"
       },
       {
@@ -113,7 +125,18 @@ document.addEventListener('DOMContentLoaded', function() {
         title: "Regresión Lineal Simple",
         description: "Análisis de regresión lineal simple",
         slides: "/temas/DisExperimental-2025/03-regresion-lineal-simple.html",
-        examples: "https://edimer.quarto.pub/regresion-lineal-simple-1/",
+        examples: [
+          {
+            url: "https://edimer.quarto.pub/regresion-lineal-simple-1/",
+            title: "Regresión lineal básica",
+            description: "Ejemplo 1"
+          },
+          {
+            url: "https://edimer.quarto.pub/rls-transformaciones/",
+            title: "Regresión con transformaciones",
+            description: "Ejemplo 2"
+          }
+        ],
         badge: "Fundamental"
       }
     ]
@@ -122,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Función para crear tarjetas
   function createCard(tema) {
     const hasSlides = tema.slides && tema.slides !== null && tema.slides !== '';
-    const hasExamples = tema.examples && tema.examples !== null && tema.examples !== '';
+    const hasExamples = tema.examples && tema.examples !== null && tema.examples.length > 0;
     
     let slidesButton = '';
     if (hasSlides) {
@@ -138,10 +161,10 @@ document.addEventListener('DOMContentLoaded', function() {
       `;
     }
     
-    let examplesButton = '';
+    let examplesButtons = '';
     if (hasExamples) {
-      examplesButton = `
-        <a href="${tema.examples}" class="btn btn-primary always-visible" target="_blank">
+      examplesButtons = tema.examples.map(example => `
+        <a href="${example.url}" class="btn btn-primary always-visible" target="_blank" title="${example.description || example.title || 'Ejemplo'}">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
@@ -149,9 +172,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <line x1="16" y1="17" x2="8" y2="17"></line>
             <polyline points="10 9 9 9 12 12 15 9 14 9"></polyline>
           </svg>
-          Ejemplos
+          ${example.title || 'Ejemplo'}
         </a>
-      `;
+      `).join('');
     }
     
     return `
@@ -165,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         <div class="card-actions">
           ${slidesButton}
-          ${examplesButton}
+          ${examplesButtons}
         </div>
       </div>
     `;
