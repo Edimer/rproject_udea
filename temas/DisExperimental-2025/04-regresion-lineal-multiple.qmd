@@ -2,7 +2,7 @@
 title: "Regresión Lineal Múltiple"
 subtitle: "Diseño Experimental"
 author: "Edimer David Jaramillo"
-date: "2025-03-28"
+date: "2025-09-26"
 format:
   revealjs:
     smaller: true
