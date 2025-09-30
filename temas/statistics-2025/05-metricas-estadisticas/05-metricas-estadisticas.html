@@ -6,18 +6,18 @@
 <script src="05-metricas-estadisticas_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="05-metricas-estadisticas_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="05-metricas-estadisticas_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="05-metricas-estadisticas_files/libs/quarto-html/quarto-syntax-highlighting-adb3e0aca62a6879b5fe105b6c8174b7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.40">
-
-  <meta name="author" content="Edimer David Jaramillo">
-  <meta name="dcterms.date" content="2025-03-25">
-  <title>Métricas estadísticas</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="05-metricas-estadisticas_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="05-metricas-estadisticas_files/libs/revealjs/dist/reveal.css">
-  <style>
+<link href="05-metricas-estadisticas_files/libs/quarto-html/quarto-syntax-highlighting-1c1298d4aec20b932e1c4c12e9ecd263.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+<meta name="author" content="Edimer David Jaramillo">
+<meta name="dcterms.date" content="2025-09-30">
+<title>Métricas estadísticas</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="05-metricas-estadisticas_files/libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="05-metricas-estadisticas_files/libs/revealjs/dist/reveal.css">
+<style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -30,8 +30,9 @@
       vertical-align: middle;
     }
     /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -42,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -97,14 +98,14 @@
     code span.vs { color: #da4453; } /* VerbatimString */
     code span.wa { color: #da4453; } /* Warning */
   </style>
-  <link rel="stylesheet" href="05-metricas-estadisticas_files/libs/revealjs/dist/theme/quarto-a01ce1a650bbb067e479af819a605763.css">
-  <link href="05-metricas-estadisticas_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="05-metricas-estadisticas_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
+<link rel="stylesheet" href="05-metricas-estadisticas_files/libs/revealjs/dist/theme/quarto-197d2e6fd4d63b44d3a6eed3b3fe80a8.css">
+<link href="05-metricas-estadisticas_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+<link href="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+<link href="05-metricas-estadisticas_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -197,8 +198,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Métricas estadísticas</h1>
+<section id="title-slide" class="quarto-title-block center"><h1 class="title">Métricas estadísticas</h1>
   <p class="subtitle">Estadística</p>
 
 <div class="quarto-title-authors">
@@ -209,26 +209,19 @@ Edimer David Jaramillo
 </div>
 </div>
 
-  <p class="date">2025-03-25</p>
-</section>
-<section id="medidas-de-resumen" class="title-slide slide level1 center" data-background-color="#23373B">
-<h1>Medidas de resumen</h1>
+  <p class="date">2025-09-30</p>
+</section><section id="medidas-de-resumen" class="title-slide slide level1 center" data-background-color="#23373B"><h1>Medidas de resumen</h1>
 <ul>
 <li><p>Las medidas de resumen permiten caracterizar la información que aportan los <span class="math inline">\(n\)</span> datos de la muestra bajo análisis.</p></li>
 <li><p>Los <strong>estadísticos</strong> o <strong>valores típicos</strong> pretenden caracterizar o describir la muestra, indicando el valor de la variable hacia el cual tienden a agruparse los datos.</p></li>
 </ul>
 
-<img data-src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Measure_illustration_%28Vector%29.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Measure_illustration_%28Vector%29.svg" class="quarto-figure quarto-figure-center r-stretch"></section><section><section id="medidas-de-tendencia-central" class="title-slide slide level1 center" data-background-color="#23373B"><h1>Medidas de tendencia central</h1>
 
-<section>
-<section id="medidas-de-tendencia-central" class="title-slide slide level1 center" data-background-color="#23373B">
-<h1>Medidas de tendencia central</h1>
-
-<img data-src="https://cdn.corporatefinanceinstitute.com/assets/central-tendency4.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="media-aritmética" class="slide level2">
-<h2>Media aritmética</h2>
+<img data-src="https://cdn.corporatefinanceinstitute.com/assets/central-tendency4.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="media-aritmética" class="slide level2"><h2>Media aritmética</h2>
 <ul>
-<li><strong>Media aritmética <span class="math inline">\((\bar{x})\)</span>:</strong> el promedio es la suma de los valores <span class="math inline">\(x_{i}\)</span> (observaciones) dividido por el tamaño <span class="math inline">\(n\)</span> de la muestra.</li>
+<li>
+<strong>Media aritmética <span class="math inline">\((\bar{x})\)</span>:</strong> el promedio es la suma de los valores <span class="math inline">\(x_{i}\)</span> (observaciones) dividido por el tamaño <span class="math inline">\(n\)</span> de la muestra.</li>
 </ul>
 <p><span class="math display">\[\bar{x}=\frac{\sum\nolimits_{i=1}^nxi}{n}=\frac{x_{1}+x_{2}+...+x_{n}}{n}\]</span></p>
 <ul>
@@ -240,11 +233,9 @@ Edimer David Jaramillo
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="co"># Media aritmética</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li><em><code>x</code></em>: debe ser de tipo numérico o entero (cuantitativo).</li>
-</ul>
-</section>
-<section id="media-ponderada" class="slide level2">
-<h2>Media ponderada</h2>
+<li>
+<em><code>x</code></em>: debe ser de tipo numérico o entero (cuantitativo).</li>
+</ul></section><section id="media-ponderada" class="slide level2"><h2>Media ponderada</h2>
 <ul>
 <li>Medida apropiada cuando en un conjunto de datos cada uno de ellos tiene una importancia relativa (o peso) respecto de los demás datos.</li>
 </ul>
@@ -254,17 +245,18 @@ Edimer David Jaramillo
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">weighted.mean</span>(x, w, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li><em><code>x</code></em>: debe ser de tipo numérico o entero (cuantitativo).</li>
-<li><em><code>w</code></em>: debe ser de tipo numérico o entero (cuantitativo).</li>
-</ul>
-</section>
-<section id="mediana" class="slide level2">
-<h2>Mediana</h2>
+<li>
+<em><code>x</code></em>: debe ser de tipo numérico o entero (cuantitativo).</li>
+<li>
+<em><code>w</code></em>: debe ser de tipo numérico o entero (cuantitativo).</li>
+</ul></section><section id="mediana" class="slide level2"><h2>Mediana</h2>
 <ul>
-<li><strong>Mediana:</strong> la mediana es el valor central en el sentido del orden. La mediana deja por encima y por debajo de ella, el 50% de los datos.
+<li>
+<strong>Mediana:</strong> la mediana es el valor central en el sentido del orden. La mediana deja por encima y por debajo de ella, el 50% de los datos.
 <ul>
 <li>No se afecta por valores extremos.</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Finding_the_median.png/1200px-Finding_the_median.png" class="quarto-figure quarto-figure-center r-stretch"><h3 id="mediana-con-r">Mediana con R</h3>
@@ -272,18 +264,18 @@ Edimer David Jaramillo
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">median</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li><em><code>x</code></em>: debe ser de tipo numérico o entero (cuantitativo).</li>
-</ul>
-</section>
-<section id="moda" class="slide level2">
-<h2>Moda</h2>
+<li>
+<em><code>x</code></em>: debe ser de tipo numérico o entero (cuantitativo).</li>
+</ul></section><section id="moda" class="slide level2"><h2>Moda</h2>
 <ul>
-<li><strong>Moda:</strong> la moda es el valor que ocurre con mayor frecuencia, es decir, el dato que más se repite.
+<li>
+<strong>Moda:</strong> la moda es el valor que ocurre con mayor frecuencia, es decir, el dato que más se repite.
 <ul>
 <li>Unimodal: una sola moda</li>
 <li>Bimodal: dos modas</li>
 <li>Multimodal: más de dos modas</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <h3 id="moda-en-r">Moda en R</h3>
 <div class="cell">
@@ -294,27 +286,21 @@ Edimer David Jaramillo
 <span id="cb4-5"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li><em><code>x</code></em>: puede ser de tipo cuantitativo o cualitativo.</li>
-</ul>
-</section>
-<section id="relación-de-media-mediana-y-moda" class="slide level2">
-<h2>Relación de media, mediana y moda</h2>
+<li>
+<em><code>x</code></em>: puede ser de tipo cuantitativo o cualitativo.</li>
+</ul></section><section id="relación-de-media-mediana-y-moda" class="slide level2"><h2>Relación de media, mediana y moda</h2>
 <ul>
 <li>En distribuciones simétricas, la media, la mediana y la moda son aproximadamente iguales.</li>
 <li>En distribuciones con sesgo a la derecha (sesgo positivo), la media tiende a ser mayor que la mediana y la moda.</li>
 <li>En distribuciones con sesgo a la izquierda (sesgo negativo) la media tiede a ser menor que la mediana y la moda.</li>
 </ul>
 
-<img data-src="images/rel_med_prom_moda.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
-<section>
-<section id="medidas-de-posición" class="title-slide slide level1 center" data-background-color="#23373B">
-<h1>Medidas de posición</h1>
+<img data-src="images/rel_med_prom_moda.png" class="quarto-figure quarto-figure-center r-stretch"></section></section><section><section id="medidas-de-posición" class="title-slide slide level1 center" data-background-color="#23373B"><h1>Medidas de posición</h1>
 
-<img data-src="https://www.mathsisfun.com/data/images/percentile-80.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="percentiles" class="slide level2">
-<h2>Percentiles</h2>
+<img data-src="https://www.mathsisfun.com/data/images/percentile-80.svg" class="quarto-figure quarto-figure-center r-stretch"></section><section id="percentiles" class="slide level2"><h2>Percentiles</h2>
 <ul>
-<li><strong>Percentiles:</strong> dividen la muestra en 100 partes iguales. Son los valores que dejan determinado porcentaje de observaciones por debajo de ellos. Por ejemplo, el percentil 10, es el valor superior al 10% de los datos, pero inferior al 90% restante.</li>
+<li>
+<strong>Percentiles:</strong> dividen la muestra en 100 partes iguales. Son los valores que dejan determinado porcentaje de observaciones por debajo de ellos. Por ejemplo, el percentil 10, es el valor superior al 10% de los datos, pero inferior al 90% restante.</li>
 </ul>
 
 <img data-src="images/percentil.png" class="quarto-figure quarto-figure-center r-stretch"><p>Ubicación del percentil <span class="math inline">\(k\)</span>: <span class="math display">\[P_{k}=\frac{k(n+1)}{100}\]</span></p>
@@ -323,11 +309,10 @@ Edimer David Jaramillo
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">quantile</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>, <span class="at">probs =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.01</span>)) <span class="co"># Todos los percentiles</span></span>
 <span id="cb5-2"><a href=""></a><span class="fu">quantile</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>, <span class="at">probs =</span> <span class="fl">0.45</span>) <span class="co"># Percentil 45</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="deciles" class="slide level2">
-<h2>Deciles</h2>
+</section><section id="deciles" class="slide level2"><h2>Deciles</h2>
 <ul>
-<li><strong>Deciles:</strong> dividen la muestra en 10 partes iguales.</li>
+<li>
+<strong>Deciles:</strong> dividen la muestra en 10 partes iguales.</li>
 </ul>
 
 <img data-src="images/deciles.png" class="quarto-figure quarto-figure-center r-stretch"><p>Ubicación del decil <span class="math inline">\(k\)</span>: <span class="math display">\[D_{k}=\frac{k(n+1)}{10}\]</span></p>
@@ -336,16 +321,16 @@ Edimer David Jaramillo
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">quantile</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>, <span class="at">probs =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.1</span>)) <span class="co"># Todos los deciles</span></span>
 <span id="cb6-2"><a href=""></a><span class="fu">quantile</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>, <span class="at">probs =</span> <span class="fl">0.20</span>) <span class="co"># Decil 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="cuartiles" class="slide level2">
-<h2>Cuartiles</h2>
+</section><section id="cuartiles" class="slide level2"><h2>Cuartiles</h2>
 <ul>
-<li><strong>Cuartiles:</strong> dividen la muestra en cuatro partes iguales.
+<li>
+<strong>Cuartiles:</strong> dividen la muestra en cuatro partes iguales.
 <ul>
 <li>Cuartil 1: 25% de las observaciones</li>
 <li>Cuartil 2: 50% de las observaciones</li>
 <li>Cuartil 3: 75% de las observaciones</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 
 <img data-src="images/cuartil.png" class="quarto-figure quarto-figure-center r-stretch"><p>Ubicación del cuartil <span class="math inline">\(k\)</span>: <span class="math display">\[Q_{k}=\frac{k(n+1)}{4}\]</span></p>
@@ -354,14 +339,9 @@ Edimer David Jaramillo
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">quantile</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>, <span class="at">probs =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.25</span>)) <span class="co"># Todos los deciles</span></span>
 <span id="cb7-2"><a href=""></a><span class="fu">quantile</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>, <span class="at">probs =</span> <span class="fl">0.75</span>) <span class="co"># Cuartil 3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section>
-<section>
-<section id="medidas-de-dispersión" class="title-slide slide level1 center" data-background-color="#23373B">
-<h1>Medidas de dispersión</h1>
+</section></section><section><section id="medidas-de-dispersión" class="title-slide slide level1 center" data-background-color="#23373B"><h1>Medidas de dispersión</h1>
 
-<img data-src="https://conjointly.com/kb/Assets/images/stat_t2.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="varianza" class="slide level2">
-<h2>Varianza</h2>
+<img data-src="https://conjointly.com/kb/Assets/images/stat_t2.gif" class="quarto-figure quarto-figure-center r-stretch"></section><section id="varianza" class="slide level2"><h2>Varianza</h2>
 <ul>
 <li><p><strong>Varianza <span class="math inline">\((S^2)\)</span>:</strong> proporciona una medida de dispersión de las distintas observaciones respecto a la media aritmética <span class="math inline">\(\bar{x}\)</span>. Se define como la suma de los cuadrados de las diferencias entre cada valor de la muestra y su media.</p></li>
 <li><p>Para la población: <span class="math display">\[\sigma^2=\frac{\sum\nolimits_{i=1}^n(x_{i}-\bar{x})}{N}^2\]</span></p></li>
@@ -371,9 +351,7 @@ Edimer David Jaramillo
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">var</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="d.-estándar-y-coeficiente-de-variación" class="slide level2">
-<h2>D. Estándar y coeficiente de variación</h2>
+</section><section id="d.-estándar-y-coeficiente-de-variación" class="slide level2"><h2>D. Estándar y coeficiente de variación</h2>
 <ul>
 <li><p><strong>Desviación estándar <span class="math inline">\((S)\)</span>:</strong> se define como la raíz cuadrada de la varianza. Tiene la propiedad de estar definida en las mismas unidades de la variable analizada.</p></li>
 <li><p>Para la población: <span class="math display">\[\sigma=\sqrt{\sigma^2}\]</span></p></li>
@@ -385,9 +363,7 @@ Edimer David Jaramillo
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">sd</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="rango-y-rango-intercuartílico" class="slide level2">
-<h2>Rango y rango intercuartílico</h2>
+</section><section id="rango-y-rango-intercuartílico" class="slide level2"><h2>Rango y rango intercuartílico</h2>
 <ul>
 <li><p><strong>Rango:</strong> es la diferencia entre el valor máximo y el mínimo. <span class="math display">\[Máximo - Mínimo\]</span></p></li>
 <li><p><strong>Rango intercuartil:</strong> el rango intercuartílico (RIQ) se obtiene como la diferencia entre los cuartiles 3 (Q3) y 1 (Q1). La mitad de las observaciones se clasifican dentro de este rango.</p></li>
@@ -399,14 +375,9 @@ Edimer David Jaramillo
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="fu">range</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="co">#Rango</span></span>
 <span id="cb10-2"><a href=""></a><span class="fu">IQR</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="co"># Rango intercuartílico</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section>
-<section>
-<section id="medidas-de-distribución-o-forma" class="title-slide slide level1 center" data-background-color="#23373B">
-<h1>Medidas de distribución o forma</h1>
+</section></section><section><section id="medidas-de-distribución-o-forma" class="title-slide slide level1 center" data-background-color="#23373B"><h1>Medidas de distribución o forma</h1>
 
-<img data-src="https://www.researchgate.net/profile/Attila-Bonyar/publication/298415862/figure/fig1/AS:340236723867648@1458130164255/Illustration-of-the-skewness-and-kurtosis-values-and-how-they-correlate-with-the-shape-of.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="coeficiente-de-asimetría" class="slide level2">
-<h2>Coeficiente de asimetría</h2>
+<img data-src="https://www.researchgate.net/profile/Attila-Bonyar/publication/298415862/figure/fig1/AS:340236723867648@1458130164255/Illustration-of-the-skewness-and-kurtosis-values-and-how-they-correlate-with-the-shape-of.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="coeficiente-de-asimetría" class="slide level2"><h2>Coeficiente de asimetría</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -419,17 +390,14 @@ Edimer David Jaramillo
 <p><span class="math display">\[g_{1}=\left[\frac{{n}}{(n-1)(n-2)}\right]\left[\frac{\sum\nolimits_{i=1}^n(x_{i}-\bar{x})^3}{S^3}\right]\]</span></p>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/asimetria.png" class="quarto-figure quarto-figure-center"></p>
+<figure><p><img data-src="images/asimetria.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div></div>
 <ul>
-<li>Instalar biblioteca <code>moments</code> <code>-&gt;</code> <code>skewness()</code></li>
-</ul>
-</section>
-<section id="coeficiente-de-curtosis" class="slide level2">
-<h2>Coeficiente de curtosis</h2>
+<li>Instalar biblioteca <code>moments</code> <code>-&gt;</code> <code>skewness()</code>
+</li>
+</ul></section><section id="coeficiente-de-curtosis" class="slide level2"><h2>Coeficiente de curtosis</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -438,104 +406,91 @@ Edimer David Jaramillo
 <li><p>Distribución leptocúrtica <span class="math inline">\(si\ g_{2}&gt;0\)</span></p></li>
 <li><p>Distribución platicúrtica <span class="math inline">\(si\ g_{2}&lt;0\)</span></p></li>
 </ul>
-<p>Fórmula del coeficiente de curtosis: <br> <br> <span class="math display">\[g_{2}=\left[\frac{{n(n+1)}}{(n-1)(n-2)(n-3)}\right]\left[\frac{\sum\nolimits_{i=1}^n(x_{i}-\bar{x})^4}{S^4}\right]-\left[\frac{{3(n-1)^2}}{(n-2)(n-3)}\right]\]</span></p>
+<p>Fórmula del coeficiente de curtosis: <br><br><span class="math display">\[g_{2}=\left[\frac{{n(n+1)}}{(n-1)(n-2)(n-3)}\right]\left[\frac{\sum\nolimits_{i=1}^n(x_{i}-\bar{x})^4}{S^4}\right]-\left[\frac{{3(n-1)^2}}{(n-2)(n-3)}\right]\]</span></p>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/curtosis.png" class="quarto-figure quarto-figure-center"></p>
+<figure><p><img data-src="images/curtosis.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div></div>
 <ul>
-<li>Instalar biblioteca <code>moments</code> <code>-&gt;</code> <code>kurtosis()</code></li>
-</ul>
-</section>
-<section id="funciones-para-estadística-descriptiva-con-r" class="slide level2 scrollable" data-background-color="#23373B">
-<h2>Funciones para estadística descriptiva con R</h2>
+<li>Instalar biblioteca <code>moments</code> <code>-&gt;</code> <code>kurtosis()</code>
+</li>
+</ul></section><section id="funciones-para-estadística-descriptiva-con-r" class="slide level2 scrollable" data-background-color="#23373B"><h2>Funciones para estadística descriptiva con R</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 64%">
 <col style="width: 21%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">Función</th>
 <th style="text-align: center;">Descripción</th>
 <th style="text-align: center;">Tipo de variable</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><code>mean()</code></td>
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code></td>
 <td style="text-align: center;">Calcular promedio</td>
 <td style="text-align: center;">cuantitativa</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>weighted.mean()</code></td>
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/stats/weighted.mean.html">weighted.mean()</a></code></td>
 <td style="text-align: center;">Calcular promedio ponderado</td>
 <td style="text-align: center;">Cunatitativa</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>median()</code></td>
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/stats/median.html">median()</a></code></td>
 <td style="text-align: center;">Calcular mediana</td>
 <td style="text-align: center;">Cuantitativa</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>sd()</code></td>
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code></td>
 <td style="text-align: center;">Calcular desviación estándar</td>
 <td style="text-align: center;">cuantitativa</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>var()</code></td>
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/stats/cor.html">var()</a></code></td>
 <td style="text-align: center;">Calcular la varianza</td>
 <td style="text-align: center;">Cuantitativa</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>range()</code></td>
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/range.html">range()</a></code></td>
 <td style="text-align: center;">Calcular el rango</td>
 <td style="text-align: center;">Cuantitativa</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>IQR()</code></td>
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/stats/IQR.html">IQR()</a></code></td>
 <td style="text-align: center;">Calcular rango intercuartílico</td>
 <td style="text-align: center;">Cuantitativa</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>quantile()</code></td>
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/stats/quantile.html">quantile()</a></code></td>
 <td style="text-align: center;">Calcular cuartiles, deciles y percentiles</td>
 <td style="text-align: center;">Cuantitativa</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>min()</code></td>
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/Extremes.html">min()</a></code></td>
 <td style="text-align: center;">Valor mínimo</td>
 <td style="text-align: center;">Cuantitativa</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>max()</code></td>
+<td style="text-align: left;"><code><a href="https://rdrr.io/r/base/Extremes.html">max()</a></code></td>
 <td style="text-align: center;">Valor máximo</td>
 <td style="text-align: center;">Cuantitativa</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">* <code>moda()</code></td>
+<td style="text-align: left;">* <code>moda()</code>
+</td>
 <td style="text-align: center;">Moda</td>
 <td style="text-align: center;">Cuantitativa y cualitativa</td>
 </tr>
 </tbody>
-</table>
-</section></section>
-<section id="tablas-de-frecuencia" class="title-slide slide level1 center" data-background-color="#23373B">
-<h1>Tablas de frecuencia</h1>
+</table></section></section><section id="tablas-de-frecuencia" class="title-slide slide level1 center" data-background-color="#23373B"><h1>Tablas de frecuencia</h1>
 
-<img data-src="https://media.gcflearnfree.org/content/63ea6e969695f31b88231f71_02_13_2023/stats_image_13_relative_frequency.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<img data-src="https://media.gcflearnfree.org/content/63ea6e969695f31b88231f71_02_13_2023/stats_image_13_relative_frequency.png" class="quarto-figure quarto-figure-center r-stretch"></section><section><section id="correlaciones" class="title-slide slide level1 center" data-background-color="#23373B"><h1>Correlaciones</h1>
 
-<section>
-<section id="correlaciones" class="title-slide slide level1 center" data-background-color="#23373B">
-<h1>Correlaciones</h1>
-
-<img data-src="https://www.simplypsychology.org/wp-content/uploads/correlation.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section" class="slide level2">
-<h2></h2>
+<img data-src="https://www.simplypsychology.org/wp-content/uploads/correlation.jpg" class="quarto-figure quarto-figure-center r-stretch"></section><section id="section" class="slide level2"><h2></h2>
 <center>
 🤝🙂🤝
 </center>
@@ -543,7 +498,7 @@ Edimer David Jaramillo
 
 
 <img data-src="images/gracias.gif" class="quarto-figure quarto-figure-center r-stretch"></section></section>
-    </div>
+</div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="https://storage.googleapis.com/efor-static/UDEA/Cloudkey/Logohorizontal.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -551,24 +506,7 @@ Edimer David Jaramillo
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="05-metricas-estadisticas_files/libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="05-metricas-estadisticas_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="05-metricas-estadisticas_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="05-metricas-estadisticas_files/libs/revealjs/plugin/quarto-support/support.js"></script>
-  
-
-  <script src="05-metricas-estadisticas_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="05-metricas-estadisticas_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="05-metricas-estadisticas_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="05-metricas-estadisticas_files/libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
-  <script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="05-metricas-estadisticas_files/libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="05-metricas-estadisticas_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="05-metricas-estadisticas_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="05-metricas-estadisticas_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="05-metricas-estadisticas_files/libs/revealjs/plugin/quarto-support/support.js"></script><script src="05-metricas-estadisticas_files/libs/revealjs/plugin/notes/notes.js"></script><script src="05-metricas-estadisticas_files/libs/revealjs/plugin/search/search.js"></script><script src="05-metricas-estadisticas_files/libs/revealjs/plugin/zoom/zoom.js"></script><script src="05-metricas-estadisticas_files/libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -760,268 +698,208 @@ Edimer David Jaramillo
           RevealZoom
         ]
       });
-    </script>
-    
-
-    <script>
-
+    </script><script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
     
-
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
-
     
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
     
-
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
-
     
-
       })();
-
-    </script>
-
-    
-
-    <script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
-        }
-      }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
-      }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const isCodeAnnotation = (el) => {
-        for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {                     
-            return true;
-          }
-        }
-        return false;
-      }
-      const onCopySuccess = function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
-        setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
-          }
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+    </script><script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
             }
           }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
-      });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          return false;
         }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
             }
-          }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
         }
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-        const config = {
-          allowHTML: true,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'light-border',
-          placement: 'bottom-start',
-        };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
-        });
-      }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
-          }
-        } else {
-          return undefined;
-        }
-      };
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
               }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
           });
         }
-      }
-    });
-    </script>
-    
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+
 
 </body></html>

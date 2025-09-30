@@ -2,7 +2,7 @@
 title: "Métricas estadísticas"
 subtitle: "Estadística"
 author: "Edimer David Jaramillo"
-date: "2025-03-25"
+date: "2025-09-30"
 format:
   revealjs:
     smaller: true
