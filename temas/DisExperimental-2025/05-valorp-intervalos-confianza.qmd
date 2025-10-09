@@ -2,7 +2,7 @@
 title: "Valor P e Intervalos de Confianza (IC)"
 subtitle: "Diseño Experimental"
 author: "Edimer David Jaramillo"
-date: "2025-10-08"
+date: "2025-10-09"
 format:
   revealjs:
     smaller: true
