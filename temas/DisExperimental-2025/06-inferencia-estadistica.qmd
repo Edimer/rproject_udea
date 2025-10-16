@@ -2,7 +2,7 @@
 title: "Inferencia Estadística"
 subtitle: "Diseño Experimental"
 author: "Edimer David Jaramillo"
-date: "2025-05-02"
+date: "2025-10-15"
 format:
   revealjs:
     smaller: true
@@ -23,7 +23,7 @@ format:
 <html><div style='float:left'></div><hr color='#EB811B' size=1px</html> 
 
 <center>
-<img src="images/img01.PNG" width = 700/>
+<img src="images/inferencia-plantas.png" width = 700/>
 </center>
 
 
