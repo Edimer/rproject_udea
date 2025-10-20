@@ -2,7 +2,7 @@
 title: "Visualización de datos"
 subtitle: "Estadística"
 author: "Edimer David Jaramillo"
-date: "2025-04-22"
+date: "2025-10-20"
 format:
   revealjs:
     smaller: true
